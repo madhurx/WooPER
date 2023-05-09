@@ -1,0 +1,13 @@
+/* font-family: 'Calistoga', cursive; */
+
+body {
+    /* background-color: #111111; */
+    background-image: url("../image/homepage.png");
+    /* font-size: xx-large; */
+    /* background-repeat: no-repeat; */
+    /* background-size:100%; */
+}
+.logo {
+    font-family: "Calistoga", cursive;
+    font-size: 40px;
+}
