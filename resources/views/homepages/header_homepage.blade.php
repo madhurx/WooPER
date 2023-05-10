@@ -15,9 +15,12 @@
         rel="stylesheet"
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
         crossorigin="anonymous" />
+    {{--  BOOTSTRAP CDN END  --}}
+
+    {{--  FONT AWESOME CDN END  --}}
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    {{--  BOOTSTRAP CDN END  --}}
+    {{--  FONT AWESOME CDN END  --}}
 
     {{--  GOOGLE FONTS START  --}}
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -25,8 +28,12 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Anton&family=Faustina:wght@300;500&family=Oswald:wght@600&family=Questrial&display=swap"
         rel="stylesheet" />
-    <link href="{{ URL::asset('assets/Homepages/css/styles.css') }}" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Cookie&family=Crimson+Text&family=Poppins:wght@500&display=swap" rel="stylesheet">
     {{--  GOOGLE FONTS END  --}}
+
+    {{--  CSS SCRIPT START  --}}
+    <link href="{{ URL::asset('assets/Homepages/css/styles.css') }}" rel="stylesheet">
+    {{--  CSS SCRIPT END  --}}
 
 </head>
 
