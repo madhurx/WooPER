@@ -29,7 +29,7 @@
         {{--  PLAN 1 START  --}}
         <div class="col  m-4 px-1 plans_col1">
             <div class="mx-2">
-                <div class="my-3"><i class="fa fa-space-shuttle"></i>
+                <div class="my-3"><i class="fa fa-leaf"></i>
                 </div>
                 <div class="plan_type_title">
                     Basic
@@ -77,7 +77,7 @@
         {{--  PLAN 2 START  --}}
         <div class="col m-4 plans_col2">
             <div class="mx-2">
-                <div class="my-3"><i class="fa fa-space-shuttle"></i>
+                <div class="my-3"><i class="fa fa-rocket"></i>
                 </div>
                 <div class="plan_type_title">
                     Starter
@@ -100,19 +100,23 @@
                 </div>
                 <div>
                     <i class="fa fa-check-circle-o"></i>
-                    <span class="plan_details_points">1 User at a time</span>
+                    <span class="plan_details_points">Handwritten Notes</span>
                 </div>
                 <div>
                     <i class="fa fa-check-circle-o"></i>
-                    <span class="plan_details_points">1 Device throughout validity</span>
+                    <span class="plan_details_points">2 User at a time</span>
                 </div>
                 <div>
                     <i class="fa fa-check-circle-o"></i>
-                    <span class="plan_details_points">No download of files</span>
+                    <span class="plan_details_points">2 Device throughout validity</span>
                 </div>
                 <div>
                     <i class="fa fa-check-circle-o"></i>
-                    <span class="plan_details_points">1 Device throughout validity</span>
+                    <span class="plan_details_points">Files can be downloaded</span>
+                </div>
+                <div>
+                    <i class="fa fa-check-circle-o"></i>
+                    <span class="plan_details_points">Customer Support 24/7</span>
                 </div>
                 <div>
                     <a href="" style="text-decoration: none">
@@ -129,7 +133,7 @@
         {{--  PLAN 3 START  --}}
         <div class="col m-4 plans_col3">
             <div class="mx-2">
-                <div class="my-3"><i class="fa fa-space-shuttle"></i>
+                <div class="my-3"><i class="fa fa-tree"></i>
                 </div>
                 <div class="plan_type_title">
                     Builder
@@ -152,23 +156,31 @@
                 </div>
                 <div>
                     <i class="fa fa-check-circle-o"></i>
-                    <span class="plan_details_points">1 User at a time</span>
+                    <span class="plan_details_points">Handwritten Notes</span>
                 </div>
                 <div>
                     <i class="fa fa-check-circle-o"></i>
-                    <span class="plan_details_points">1 Device throughout validity</span>
+                    <span class="plan_details_points">Podcasts</span>
                 </div>
                 <div>
                     <i class="fa fa-check-circle-o"></i>
-                    <span class="plan_details_points">No download of files</span>
+                    <span class="plan_details_points">3 User at a time</span>
                 </div>
                 <div>
                     <i class="fa fa-check-circle-o"></i>
-                    <span class="plan_details_points">1 Device throughout validity</span>
+                    <span class="plan_details_points">3 Device throughout validity</span>
                 </div>
                 <div>
                     <i class="fa fa-check-circle-o"></i>
-                    <span class="plan_details_points">No download of files</span>
+                    <span class="plan_details_points">Files can be downloaded</span>
+                </div>
+                <div>
+                    <i class="fa fa-check-circle-o"></i>
+                    <span class="plan_details_points">Customer Support 24/7</span>
+                </div>
+                <div>
+                    <i class="fa fa-check-circle-o"></i>
+                    <span class="plan_details_points">Dedicated Instructor</span>
                 </div>
                 <div>
                     <a href="" style="text-decoration: none">
@@ -208,31 +220,39 @@
                 </div>
                 <div>
                     <i class="fa fa-check-circle-o"></i>
-                    <span class="plan_details_points">1 User at a time</span>
+                    <span class="plan_details_points">Handwritten Notes</span>
                 </div>
                 <div>
                     <i class="fa fa-check-circle-o"></i>
-                    <span class="plan_details_points">1 Device throughout validity</span>
+                    <span class="plan_details_points">Podcasts</span>
                 </div>
                 <div>
                     <i class="fa fa-check-circle-o"></i>
-                    <span class="plan_details_points">No download of files</span>
+                    <span class="plan_details_points">Videos</span>
                 </div>
                 <div>
                     <i class="fa fa-check-circle-o"></i>
-                    <span class="plan_details_points">1 Device throughout validity</span>
+                    <span class="plan_details_points">3 User at a time</span>
                 </div>
                 <div>
                     <i class="fa fa-check-circle-o"></i>
-                    <span class="plan_details_points">No download of files</span>
+                    <span class="plan_details_points">3 Device throughout validity</span>
                 </div>
                 <div>
                     <i class="fa fa-check-circle-o"></i>
-                    <span class="plan_details_points">1 Device throughout validity</span>
+                    <span class="plan_details_points">Files can be downloaded</span>
                 </div>
                 <div>
                     <i class="fa fa-check-circle-o"></i>
-                    <span class="plan_details_points">No download of files</span>
+                    <span class="plan_details_points">Customer Support 24/7</span>
+                </div>
+                <div>
+                    <i class="fa fa-check-circle-o"></i>
+                    <span class="plan_details_points">Dedicated Instructor</span>
+                </div>
+                <div>
+                    <i class="fa fa-check-circle-o"></i>
+                    <span class="plan_details_points">Special Session by Sarwan Sir</span>
                 </div>
                 <div>
                     <a href="" style="text-decoration: none">

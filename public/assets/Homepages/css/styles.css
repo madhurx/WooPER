@@ -2,11 +2,11 @@ body {
     background-image: url("../image/homepage.png");
     background-attachment: fixed;
 }
-bbody:before {
+body:before {
     content: " ";
     width: 100%;
     height: 100%;
-    position: absolute;
+    position: fixed;
     z-index: -1;
     top: 0;
     left: 0;
