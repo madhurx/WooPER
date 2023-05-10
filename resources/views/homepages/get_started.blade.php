@@ -1,35 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
-
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Document</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Calistoga&display=swap"
-            rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
-            crossorigin="anonymous">
-        <link href="{{ URL::asset('assets/Homepages/css/styles.css') }}" rel="stylesheet">
-    </head>
-
-    <body>
-        <nav class="navbar navbar-dark">
-            <div class="container-fluid py-2">
-                <a class="navbar-brand" href="{{ route('get_started')  }}">
-                    <p class="logo">WooPER</p>
-                </a>
-                <div class="mx-5">
-                    <button class="btn btn-primary btn-lg" type="button">Search</button>
-                </div>
+@include('homepages.header_homepage')
+    <div class="container text-light">
+        <div class="row mt-5">
+            <div class="col mt-5">
+                <h1 class="display-2 get_started_line1 my-5">
+                    Learn Anywhere, Anytime
+                </h1>
             </div>
-
-        </nav>
-
-    </body>
-
-</html>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p class="h3 get_started_line2">
+                    WOOPER will open the world of Knowledge for you<br />and your
+                    Knowledge is the way to your success.
+                </p>
+                <p />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p class="h3 get_started_line3">
+                    Ready to be a Master!!
+                    <a href="{{ route('pricing_plans') }}">
+                    <button type="button"
+                        class="mx-3 btn btn-lg btn-light get_started_starting_btn">
+                        GET STARTED <span style="font-size: x-large">></span>
+                    </button></a>
+                </p>
+                <p />
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col">
+                <a href=""><i class="text-light fa fa-facebook me-1"></i></a>
+                <a href=""><i class="text-light fa fa-twitter m-1"></i></a>
+                <a href=""><i class="text-light fa fa-instagram m-1"></i></a>
+                <a href=""><i class="text-light fa fa-youtube-play m-1"></i></a>
+            </div>
+        </div>
+    </div>
+@include('homepages.footer_homepage')

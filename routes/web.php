@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('Homepages.get_started');
 })->name('get_started');
+
+Route::get('/plans', function () {
+    return view('Homepages.pricing_plans');
+})->name('pricing_plans');
