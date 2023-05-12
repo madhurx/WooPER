@@ -11,7 +11,7 @@
         rel="stylesheet"
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
         crossorigin="anonymous" />
-    <link href="styles.css" rel="stylesheet" />
+    <link href="{{ URL::asset('assets/subscribed_pages/css/styles.css') }}" rel="stylesheet" />
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -28,11 +28,12 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Anton&family=Cookie&family=Crimson+Text&family=Poppins:wght@500&display=swap"
         rel="stylesheet" />
+
 </head>
 
 <body>
 
-{{--  NAV BAR START  --}}
+    {{--  NAV BAR START  --}}
     <nav class="navbar navbar-default navbar-light bg-white sticky-top navbar_getstarted">
         <div class="container-fluid">
             <a class="navbar-brand" href="">

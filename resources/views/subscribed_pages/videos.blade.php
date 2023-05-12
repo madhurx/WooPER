@@ -161,7 +161,4 @@
 
 {{-- MAIN SECTION END --}}
 
-{{-- CLIENT SECTION START --}}
-
-{{-- CLIENT SECTION END --}}
 @include('subscribed_pages.footer_subscribed_pages')

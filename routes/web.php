@@ -13,6 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+//======= LANDING PAGES START
+
 Route::get('/', function () {
     return view('landing_pages.get_started');
 })->name('get_started');
@@ -21,10 +24,6 @@ Route::get('/plans', function () {
     return view('landing_pages.pricing_plans');
 })->name('pricing_plans');
 
-Route::get('/videos', function () {
-    return view('subscribed_pages.videos');
-})->name('videos');
-
 Route::get('/login', function () {
     return view('landing_pages.login');
 })->name('login');
@@ -32,3 +31,17 @@ Route::get('/login', function () {
 Route::get('/register', function () {
     return view('landing_pages.register');
 })->name('register');
+
+//======= LANDING PAGES END
+
+//======= SUBSCRIBED PAGES START
+
+Route::get('/videos', function () {
+    return view('subscribed_pages.videos');
+})->name('videos');
+
+Route::get('/podcast', function () {
+    return view('subscribed_pages.podcasts');
+})->name('podcasts');
+
+//======= SUBSCRIBED PAGES END
