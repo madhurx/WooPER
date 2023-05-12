@@ -44,4 +44,12 @@ Route::get('/podcast', function () {
     return view('subscribed_pages.podcasts');
 })->name('podcasts');
 
+Route::get('/notes', function () {
+    return view('subscribed_pages.notes');
+})->name('notes');
+
+Route::get('/blogs', function () {
+    return view('subscribed_pages.blogs');
+})->name('blogs');
+
 //======= SUBSCRIBED PAGES END
