@@ -15,7 +15,7 @@
 <div class="container mb-5 py-2 mt-3">
     <div class="row row-cols-4 justify-content-center align-items-center g-2">
 
-        <div class="col mx-3 my-5 notes_col">
+        <div class="col mx-3 my-5 py-4 px-2 notes_col">
             <div class="card border-0">
                 <img src="{{ URL::asset('assets/subscribed_pages/image/notes/php.png') }}"
                     class="card-img-top" alt="" style=" height:180px;">
@@ -34,7 +34,7 @@
             </div>
         </div>
 
-        <div class="col mx-3 my-5 notes_col">
+        <div class="col mx-3 my-5 py-4 px-2 notes_col">
             <div class="card border-0">
                 <img src="{{ URL::asset('assets/subscribed_pages/image/notes/css.png') }}"
                     class="card-img-top" alt="" style=" height:180px;">
@@ -52,7 +52,7 @@
             </div>
         </div>
 
-        <div class="col mx-3 my-5 notes_col">
+        <div class="col mx-3 my-5 py-4 px-2 notes_col">
             <div class="card border-0">
                 <img src="{{ URL::asset('assets/subscribed_pages/image/notes/html.png') }}"
                     class="card-img-top" alt="" style=" height:180px;">
@@ -70,7 +70,7 @@
             </div>
         </div>
 
-        <div class="col mx-3 my-5 notes_col">
+        <div class="col mx-3 my-5 py-4 px-2 notes_col">
             <div class="card border-0">
                 <img src="{{ URL::asset('assets/subscribed_pages/image/notes/jquery.png') }}"
                     class="card-img-top" alt="" style=" height:180px;">
@@ -88,7 +88,7 @@
             </div>
         </div>
 
-        <div class="col mx-3 my-5 notes_col">
+        <div class="col mx-3 my-5 py-4 px-2 notes_col">
             <div class="card border-0">
                 <img src="{{ URL::asset('assets/subscribed_pages/image/notes/laravel.png') }}"
                     class="card-img-top" alt="" style=" height:180px;">
@@ -106,7 +106,7 @@
             </div>
         </div>
 
-        <div class="col mx-3 my-5 notes_col">
+        <div class="col mx-3 my-5 py-4 px-2 notes_col">
             <div class="card border-0">
                 <img src="{{ URL::asset('assets/subscribed_pages/image/notes/js.png') }}"
                     class="card-img-top" alt="" style=" height:180px;">
@@ -124,7 +124,7 @@
             </div>
         </div>
 
-        <div class="col mx-3 my-5 notes_col">
+        <div class="col mx-3 my-5 py-4 px-2 notes_col">
             <div class="card border-0">
                 <img src="{{ URL::asset('assets/subscribed_pages/image/notes/mysql.png') }}"
                     class="card-img-top" alt="" style=" height:180px;">
@@ -142,7 +142,7 @@
             </div>
         </div>
 
-        <div class="col mx-3 my-5 notes_col">
+        <div class="col mx-3 my-5 py-4 px-2 notes_col">
             <div class="card border-0">
                 <img src="{{ URL::asset('assets/subscribed_pages/image/notes/postgres.png') }}"
                     class="card-img-top" alt="" style=" height:180px;">
