@@ -7,7 +7,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
+    <title>TITLEEEEEEEEE</title>
     {{--  BASIC TAGS END  --}}
 
     {{--  BOOTSTRAP CDN START  --}}
@@ -16,10 +16,6 @@
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
         crossorigin="anonymous" />
     {{--  BOOTSTRAP CDN END  --}}
-
-    {{--  CSS SCRIPT START  --}}
-    <link href="{{ URL::asset('assets/subscribed_pages/css/styles.css') }}" rel="stylesheet" />
-    {{--  CSS SCRIPT END  --}}
 
     {{--  FONT AWESOME CDN END  --}}
     <link rel="stylesheet"
@@ -37,12 +33,16 @@
         rel="stylesheet" />
     {{--  GOOGLE FONTS END  --}}
 
+    {{--  CSS SCRIPT START  --}}
+    <link href="{{ URL::asset('assets/landing_pages/css/styles.css') }}" rel="stylesheet">
+    {{--  CSS SCRIPT END  --}}
+
 </head>
 
 <body>
 
-    {{--  NAV BAR START  --}}
-    <nav class="navbar navbar-default navbar-light bg-white sticky-top navbar_getstarted">
+    {{--  NAV START  --}}
+    <nav class="navbar navbar-light bg-white sticky-top navbar_getstarted">
         <div class="container-fluid">
             <a class="navbar-brand" href="">
                 <img src="Wooper_logo_black.PNG" alt="" class="logo" />
@@ -55,4 +55,4 @@
             </div>
         </div>
     </nav>
-    {{--  NAV BAR END  --}}
+    {{--  NAV END  --}}
