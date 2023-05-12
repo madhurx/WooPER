@@ -1,4 +1,4 @@
-@include('homepages.header_homepage')
+@include('landing_pages.header_landing_page')
 
 <div class="container">
 
@@ -27,7 +27,7 @@
     <div class="row rows-cols-4 justify-content-center align-items-start g-2">
 
         {{--  PLAN 1 START  --}}
-        <div class="col  m-4 px-1 plans_col1">
+        <div class="col m-4 px-1 plans_col1">
             <div class="mx-2">
                 <div class="my-3"><i class="fa fa-leaf"></i>
                 </div>
@@ -271,4 +271,4 @@
     {{--  PLANS END  --}}
 </div>
 
-@include('homepages.footer_homepage')
+@include('landing_pages.footer_landing_page')

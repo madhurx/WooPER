@@ -1,4 +1,4 @@
-@include('homepages.header_homepage')
+@include('landing_pages.header_landing_page')
     <div class="container text-light">
         <div class="row mt-5">
             <div class="col mt-5">
@@ -29,7 +29,7 @@
                 <p />
             </div>
         </div>
-        <hr />
+        <hr class="get_started_hr">
         <div class="row">
             <div class="col">
                 <a href=""><i class="text-light fa fa-facebook me-1"></i></a>
@@ -39,4 +39,4 @@
             </div>
         </div>
     </div>
-@include('homepages.footer_homepage')
+@include('landing_pages.footer_landing_page')

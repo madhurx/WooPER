@@ -14,9 +14,21 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('Homepages.get_started');
+    return view('landing_pages.get_started');
 })->name('get_started');
 
 Route::get('/plans', function () {
-    return view('Homepages.pricing_plans');
+    return view('landing_pages.pricing_plans');
 })->name('pricing_plans');
+
+Route::get('/videos', function () {
+    return view('subscribed_pages.videos');
+})->name('videos');
+
+Route::get('/login', function () {
+    return view('landing_pages.login');
+})->name('login');
+
+Route::get('/register', function () {
+    return view('landing_pages.register');
+})->name('register');
