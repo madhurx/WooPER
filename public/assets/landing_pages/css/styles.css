@@ -1,8 +1,8 @@
-bodyy {
+body {
     background-image: url("../image/landing_page_bg.png");
     background-attachment: fixed;
 }
-body:beforee {
+body:before {
     content: " ";
     width: 100%;
     height: 100%;
@@ -23,7 +23,7 @@ body:beforee {
         rgba(0, 0, 0, 0) 100%
     );
 }
-.logoo {
+.logo {
     display: inline-block;
     margin-right: 1rem;
     font-size: 1.25rem;
@@ -31,7 +31,7 @@ body:beforee {
     height: 50px;
     margin-bottom: 0px;
 }
-.navbar_getstartedd {
+.navbar_getstarted {
     background-color: rgba(0, 0, 0);
 
     /* position: fixed; */

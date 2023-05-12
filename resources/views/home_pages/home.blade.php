@@ -12,7 +12,6 @@
             <p class="display-6 fs-3">
                 We are team of talented teachers bringing out the change in world.
             </p>
-
         </div>
         <div class="col m-3 text-center">
             <img src="homepage_main_image.PNG" class="img-fluid rounded-top" alt="">

@@ -7,7 +7,7 @@
                 </h1>
             </div>
         </div>
-        <div class="row">
+        <div cla{{ ss=" }}row">
             <div class="col">
                 <p class="h3 get_started_line2">
                     WOOPER will open the world of Knowledge for you<br />and your
@@ -32,10 +32,10 @@
         <hr class="get_started_hr">
         <div class="row">
             <div class="col">
-                <a href=""><i class="text-light fa fa-facebook me-1"></i></a>
-                <a href=""><i class="text-light fa fa-twitter m-1"></i></a>
-                <a href=""><i class="text-light fa fa-instagram m-1"></i></a>
-                <a href=""><i class="text-light fa fa-youtube-play m-1"></i></a>
+                <a href="{{  url('https://facebook.com') }}" target="_blank"><i class="text-light fa fa-facebook me-1"></i></a>&nbsp;
+                <a href="{{  url('https://twitter.com') }}" target="_blank"><i class="text-light fa fa-twitter m-1"></i></a>&nbsp;
+                <a href="{{  url('https://instagram.com') }}" target="_blank"><i class="text-light fa fa-instagram m-1"></i></a>&nbsp;
+                <a href="{{  url('https://youtube.com') }}" target="_blank"><i class="text-light fa fa-youtube-play m-1"></i></a>
             </div>
         </div>
     </div>

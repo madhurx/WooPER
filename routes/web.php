@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Landing_Page\Basic;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,9 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 //======= LANDING PAGES START
 
-Route::get('/', function () {
-    return view('landing_pages.get_started');
-})->name('get_started');
+Route::get('/', 'Landing_Page\Basic@get_started' )->name('get_started');
 
 Route::get('/plans', function () {
     return view('landing_pages.pricing_plans');

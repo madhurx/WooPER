@@ -7,7 +7,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>TITLEEEEEEEEE</title>
+    <title>@if ($title)
+        $title = "WOOPER";
+    @else
+    $title = "565";
+        
+    @endif
+        {{$title}}</title>
     {{--  BASIC TAGS END  --}}
 
     {{--  BOOTSTRAP CDN START  --}}
@@ -28,7 +34,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Anton&family=Faustina:wght@300;500&family=Oswald:wght@600&family=Questrial&display=swap"
         rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Cookie&family=Crimson+Text&family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Cookie&family=Crimson+Text&family=Poppins:wght@500&display=swap"
+        rel="stylesheet">
     {{--  GOOGLE FONTS END  --}}
 
     {{--  CSS SCRIPT START  --}}
@@ -41,15 +49,21 @@
 <body>
     <nav class="navbar navbar-dark sticky-top navbar_getstarted">
         <div class="container-fluid">
-            <a class="navbar-brand" href="">
+            <a class="navbar-brand" href="{{ route('get_started') }}">
                 <img src="{{ URL::asset('assets/landing_pages/image/Wooper_logo_white.PNG') }}"
                     alt="" class="logo" />
             </a>
             <div class="mx-5">
-                <button class="btn btn-outline-dark rounded-pill btn-sm get_started_signin_btn"
-                    type="button">
-                    SIGN IN
-                </button>
+                @if (Request::path() == 'login')
+                    <a name="" id=""
+                        class="btn btn-outline-dark rounded-pill btn-sm get_started_signin_btn"
+                        href="{{ route('register') }}" role="button">SIGN UP</a>
+                @else
+                    <a name="" id=""
+                        class="btn btn-outline-dark rounded-pill btn-sm get_started_signin_btn"
+                        href="{{ route('login') }}" role="button">SIGN IN</a>
+                @endif
+
             </div>
         </div>
     </nav>
