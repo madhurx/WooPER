@@ -7,7 +7,7 @@
                 </h1>
             </div>
         </div>
-        <div cla{{ ss=" }}row">
+        <div class="row">
             <div class="col">
                 <p class="h3 get_started_line2">
                     WOOPER will open the world of Knowledge for you<br />and your

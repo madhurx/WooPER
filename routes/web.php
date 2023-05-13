@@ -19,17 +19,11 @@ use App\Http\Controllers\Landing_Page\Basic;
 
 Route::get('/', 'Landing_Page\Basic@get_started' )->name('get_started');
 
-Route::get('/plans', function () {
-    return view('landing_pages.pricing_plans');
-})->name('pricing_plans');
+Route::get('/plans', 'Landing_Page\Basic@plans')->name('pricing_plans');
 
-Route::get('/login', function () {
-    return view('landing_pages.login');
-})->name('login');
+Route::get('/login', 'Landing_Page\Basic@login')->name('login');
 
-Route::get('/register', function () {
-    return view('landing_pages.register');
-})->name('register');
+Route::get('/register', 'Landing_Page\Basic@register')->name('register');
 
 //======= LANDING PAGES END
 

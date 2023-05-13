@@ -138,7 +138,7 @@ body:before {
 .reg_form_col {
     border: 0px solid white;
     border-radius: 25px;
-    background: url("form_background.jpg");
+    background: url("../image/form_background.jpg");
     background-size: cover;
     background-origin: border-box;
     z-index: 1009;

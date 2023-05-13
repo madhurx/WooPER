@@ -42,11 +42,38 @@
 <body>
 
     {{--  NAV START  --}}
-    <nav class="navbar navbar-light bg-white sticky-top navbar_getstarted">
+    <nav class="navbar navbar-light bg-white sticky-top navbar_getstarted navbar-expand-sm">
         <div class="container-fluid">
             <a class="navbar-brand" href="">
                 <img src="Wooper_logo_black.PNG" alt="" class="logo" />
             </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#mynavbarr">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="mynavbarr">
+                <ul class="navbar-nav navbar-nav">
+                    <li class="nav-item fw-medium">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item fw-medium">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item fw-medium">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item dropdown fw-medium">
+                        <a class="nav-link dropdown-toggle" href="#" role="button"
+                            data-bs-toggle="dropdown" data-bs-display="static"
+                            aria-expanded="false">Resources</a>
+                        <ul class="dropdown-menu dropdown-menu-start">
+                            <li><a class="dropdown-item" href="#">Link</a></li>
+                            <li><a class="dropdown-item" href="#">Another link</a></li>
+                            <li><a class="dropdown-item" href="#">A third link</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
             <div class="mx-5">
                 <button class="btn btn-outline-dark rounded-pill btn-sm get_started_signin_btn"
                     type="button">
