@@ -91,7 +91,16 @@
                             <input type="password"
                                 class="form-control form-control-lg bg-secondary bg-opacity-10 text-white border-start-0 border-top-0 border-bottom-0" />
                         </div>
-
+                        <div class="mb-3"></div>
+                            <input class="form-check-input ms-2 " type="checkbox" value=""
+                                id="">
+                            <label class="form-check-label text-light fw-medium" for="">
+                                Remember Me
+                            </label>
+                            <a name="" id=""
+                                class="text-end float-end text-decoration-none text-light fst-italic fw-medium"
+                                href="#" role="button">Forgot Password?</a>
+                        </div>
                         <div class="text-center m-1">
                             <button type="button"
                                 class="btn btn-primary px-4 py-3 reg_form_submit_button">
