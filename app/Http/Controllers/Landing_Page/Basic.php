@@ -16,7 +16,7 @@ class Basic extends Controller
             return view('landing_pages.get_started')->with(compact('title'));
         }
         else{
-            return view('home_pages.home');
+            // return view('home_pages.home');
         }
     }
     public function plans()

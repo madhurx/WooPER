@@ -23,7 +23,7 @@
                     <a href="{{ route('pricing_plans') }}">
                     <button type="button"
                         class="mx-3 btn btn-lg btn-light get_started_starting_btn">
-                        GET STARTED <span style="font-size: x-large">></span>
+                        GET STARTED <span style="font-size: x-large"></span>
                     </button></a>
                 </p>
                 <p />
