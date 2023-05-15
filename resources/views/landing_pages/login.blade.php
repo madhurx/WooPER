@@ -1,50 +1,6 @@
-{{--  <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
-        crossorigin="anonymous" />
-    <link href="styles.css" rel="stylesheet" />
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Anton&family=Faustina:wght@300;500&family=Oswald:wght@600&family=Questrial&display=swap"
-        rel="stylesheet" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Anton&family=Faustina:wght@300;500&family=Oswald:wght@600&family=Questrial&display=swap"
-        rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Anton&family=Cookie&family=Crimson+Text&family=Poppins:wght@500&display=swap"
-        rel="stylesheet" />
-</head>
-
-<body>
-    <nav class="navbar navbar-dark navbar-fixed-top navbar_getstarted">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="">
-                <img src="Wooper_logo_white.PNG" alt="" class="logo" />
-            </a>
-            <div class="mx-5">
-                <button class="btn btn-outline-dark rounded-pill btn-sm get_started_signin_btn"
-                    type="button">
-                    SIGN IN
-                </button>
-            </div>
-        </div>
-    </nav>  --}}
 @include('landing_pages.header_landing_page')
+
+
 
 {{-- MAIN SECTION START --}}
 <div class="container">
@@ -77,21 +33,33 @@
                     <p class="text-center reg_form_heading">Welcome Back!</p>
                 </div>
                 <div class="reg_form_div">
-                    <form method="post">
+                    <form method="post" action="{{ url('/') }}/login">
+                        @csrf
                         <div class="input-group input-group-lg mb-3">
                             <span class="input-group-text bg-danger-subtle border-2"><i
                                     class="fa fa-user"></i></span>
-                            <input type="email"
+                            <input type="email" name="username" value="{{ old('username') }}"
                                 class="form-control form-control-lg bg-secondary bg-opacity-10 text-white border-start-0 border-top-0 border-bottom-0" />
                         </div>
 
                         <div class="input-group input-group-lg mb-3">
                             <span class="input-group-text bg-danger-subtle border-2"><i
                                     class="fa fa-lock"></i></span>
-                            <input type="password"
+                            <input type="password" name="password" value="{{  old('password')  }}"
                                 class="form-control form-control-lg bg-secondary bg-opacity-10 text-white border-start-0 border-top-0 border-bottom-0" />
                         </div>
-                        <div class="mb-3"></div>
+
+                       
+                            @if(isset($incorrect_msg))
+                            <div class="text-warning">
+                                {{  $incorrect_msg }}
+                            </div>
+
+                            @endif
+                        
+
+                        <div class="mb-3 text-start">
+
                             <input class="form-check-input ms-2 " type="checkbox" value=""
                                 id="">
                             <label class="form-check-label text-light fw-medium" for="">
@@ -101,9 +69,9 @@
                                 class="text-end float-end text-decoration-none text-light fst-italic fw-medium"
                                 href="#" role="button">Forgot Password?</a>
                         </div>
-                        <div class="text-center m-1">
-                            <button type="button"
-                                class="btn btn-primary px-4 py-3 reg_form_submit_button">
+                        <div class="text-center my-4">
+                            <button type="submit"
+                                class="btn btn-outline-danger px-4 py-3 reg_form_submit_button">
                                 SIGN IN <i class="fa fa-arrow-right"></i>
                             </button>
                         </div>

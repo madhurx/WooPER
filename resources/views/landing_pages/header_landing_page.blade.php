@@ -59,11 +59,11 @@
                 @if (Request::path() == 'login')
                     <a name="" id=""
                         class="btn btn-outline-dark rounded-pill btn-sm get_started_signin_btn"
-                        href="{{ route('register') }}" role="button">SIGN UP</a>
+                        href="{{ route('get_register') }}" role="button">SIGN UP</a>
                 @else
                     <a name="" id=""
                         class="btn btn-outline-dark rounded-pill btn-sm get_started_signin_btn"
-                        href="{{ route('login') }}" role="button">SIGN IN</a>
+                        href="{{ route('get_login') }}" role="button">SIGN IN</a>
                 @endif
 
             </div>

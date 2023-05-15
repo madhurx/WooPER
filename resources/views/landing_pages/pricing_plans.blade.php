@@ -13,7 +13,8 @@
             </p>
             <p class="text-center plans_para2">
                 Choose the plan that is best for you. Now at
-                <span style="color:rgb(0, 0, 0); background-color: orange; padding-inline: 2px">25%
+                <span
+                    style="color:rgb(0, 0, 0); background-color: rgb(253, 180, 80); padding-inline: 2px">25%
                     off
                 </span>
             </p>
@@ -63,7 +64,8 @@
                     <span class="plan_details_points">No download of files</span>
                 </div>
                 <div>
-                    <a href="" style="text-decoration: none" plan_id="1">
+                    <a href="{{ route('get_register', ['selected_plan_id' => 1]) }}"
+                        style="text-decoration: none" plan_id="1">
                         <div style="background-color: black; color:white;"
                             class="my-3 py-2 text-center h6">
                             CHOOSE PLAN
@@ -119,7 +121,8 @@
                     <span class="plan_details_points">Customer Support 24/7</span>
                 </div>
                 <div>
-                    <a href="" style="text-decoration: none" plan_id="2">
+                    <a href="{{ route('get_register', ['selected_plan_id' => 2]) }}"
+                        style="text-decoration: none" plan_id="2">
                         <div style="background-color: black; color:white;"
                             class="my-3 py-2 text-center h6">
                             CHOOSE PLAN
@@ -183,7 +186,8 @@
                     <span class="plan_details_points">Dedicated Instructor</span>
                 </div>
                 <div>
-                    <a href="" style="text-decoration: none" plan_id="3">
+                    <a href="{{ route('get_register', ['selected_plan_id' => 3]) }}"
+                        style="text-decoration: none" plan_id="3">
                         <div style="background-color: black; color:white;"
                             class="my-3 py-2 text-center h6">
                             CHOOSE PLAN
@@ -255,7 +259,8 @@
                     <span class="plan_details_points">Special Session by Sarwan Sir</span>
                 </div>
                 <div>
-                    <a href="" style="text-decoration: none" plan_id="4">
+                    <a href="{{ route('get_register', ['selected_plan_id' => 4]) }}"
+                        style="text-decoration: none" plan_id="4">
                         <div style="background-color: black; color:white;"
                             class="my-3 py-2 text-center h6">
                             CHOOSE PLAN

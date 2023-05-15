@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Landing_Page\Basic;
+use App\Http\Controllers\Landing_Page\Learner_Auth_Controller;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,34 +16,46 @@ use App\Http\Controllers\Landing_Page\Basic;
 */
 
 
-//======= LANDING PAGES START
+Route::group(['middleware' => "web"], function () {
+    //======= LANDING PAGES START
 
-Route::get('/', 'Landing_Page\Basic@get_started' )->name('get_started');
+    Route::get('/', 'Landing_Page\Basic@get_started')->name('get_started');
 
-Route::get('/plans', 'Landing_Page\Basic@plans')->name('pricing_plans');
+    Route::get('/plans', 'Landing_Page\Basic@plans')->name('pricing_plans');
 
-Route::get('/login', 'Landing_Page\Basic@login')->name('login');
+    Route::get('/login', 'Landing_Page\Basic@view_login_page')->name('get_login');
 
-Route::get('/register', 'Landing_Page\Basic@register')->name('register');
+    Route::get('/register/{selected_plan_id?}', 'Landing_Page\Basic@view_register_page')->name('get_register');
 
-//======= LANDING PAGES END
+    Route::post('/register', 'Landing_Page\Learner_Auth_Controller@register')->name('post_register');
 
-//======= SUBSCRIBED PAGES START
+    Route::post('/login', 'Landing_Page\Learner_Auth_Controller@login')->name('post_login');
 
-Route::get('/videos', function () {
-    return view('subscribed_pages.videos');
-})->name('videos');
+    //======= LANDING PAGES END
 
-Route::get('/podcast', function () {
-    return view('subscribed_pages.podcasts');
-})->name('podcasts');
+    //======= HOME PAGES START
 
-Route::get('/notes', function () {
-    return view('subscribed_pages.notes');
-})->name('notes');
+    Route::get('/home', 'Home_Pages\Basic@index')->name('homepage_index');
 
-Route::get('/blogs', function () {
-    return view('subscribed_pages.blogs');
-})->name('blogs');
+    //======= HOME PAGES END
 
-//======= SUBSCRIBED PAGES END
+    //======= SUBSCRIBED PAGES START
+
+    Route::get('/videos', function () {
+        return view('subscribed_pages.videos');
+    })->name('videos');
+
+    Route::get('/podcast', function () {
+        return view('subscribed_pages.podcasts');
+    })->name('podcasts');
+
+    Route::get('/notes', function () {
+        return view('subscribed_pages.notes');
+    })->name('notes');
+
+    Route::get('/blogs', function () {
+        return view('subscribed_pages.blogs');
+    })->name('blogs');
+
+    //======= SUBSCRIBED PAGES END
+});

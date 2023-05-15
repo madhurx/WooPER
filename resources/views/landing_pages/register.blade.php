@@ -1,5 +1,13 @@
 @include('landing_pages.header_landing_page')
 
+{{--  Checking if plan is selected start --}}
+@if (!isset($plan_id))
+    <script>
+        window.location = "{{ route('pricing_plans') }}";
+    </script>
+    echo("AASs");
+@endif
+{{--  Checking if plan is selected end --}}
 
 {{-- MAIN SECTION START --}}
 <div class="container">
@@ -43,15 +51,21 @@
                     </p>
                 </div>
                 <div class="reg_form_div">
-                    <form method="post">
-                        <table>
-                            <tr>
+                    <form method="post" action="{{ url('/register') }}" class=" d-flex justify-content-center">
+                        @csrf
+                        <table class="m-0">
+                            <tr class="align-top text-start">
                                 <td class="pe-2">
                                     <div class="mb-3">
                                         <label for="" class="form-label">First Name</label>
                                         <input type="text"
                                             class="form-control form-control-lg bg-secondary bg-opacity-10 text-white border-top-0 border-start-0 border-end-0"
-                                            name="" id="" placeholder="">
+                                            name="first_name" id="" placeholder="">
+                                        <small class="form-text text-warning fw-medium">
+                                            @error('first_name')
+                                                {{ $message }}
+                                            @enderror
+                                        </small>
                                     </div>
                                 </td>
                                 <td class="ps-2">
@@ -59,23 +73,29 @@
                                         <label for="" class="form-label">Last Name</label>
                                         <input type="text"
                                             class="form-control form-control-lg bg-secondary bg-opacity-10 text-white border-top-0 border-start-0 border-end-0"
-                                            name="" id="" placeholder="">
+                                            name="last_name" id="" placeholder="">
+                                        <small class="form-text text-warning fw-medium">
+                                            @error('last_name')
+                                                {{ $message }}
+                                            @enderror
+                                        </small>
                                     </div>
                                 </td>
                             </tr>
 
-                            <tr>
+                            <tr class="text-start">
                                 <td class="pe-2">
                                     <div class="mb-3">
                                         <label for="" class="form-label">Gender</label>
                                         <select
                                             class="form-select form-select-lg bg-secondary bg-opacity-10 text-white border-top-0 border-start-0 border-end-0"
-                                            name="" id="">
-                                            <option class="bg-black text-white" selected>Male
+                                            name="gender" id="">
+                                            <option class="bg-black text-white" value="Male"
+                                                selected>Male
                                             </option>
-                                            <option class="bg-black text-white" value="">
+                                            <option class="bg-black text-white" value="Trans">
                                                 Trans</option>
-                                            <option class="bg-black text-white" value="">
+                                            <option class="bg-black text-white" value="Female">
                                                 Female</option>
                                         </select>
                                     </div>
@@ -85,8 +105,9 @@
                                         <label for="" class="form-label">Country</label>
                                         <select
                                             class="form-select form-select-lg bg-secondary bg-opacity-10 text-white border-top-0 border-start-0 border-end-0"
-                                            name="" id="">
-                                            <option class="bg-black text-white" selected>India</option>
+                                            name="country" id="">
+                                            <option class="bg-black text-white" selected value="India">India
+                                            </option>
                                             @foreach ($all_countries as $country)
                                                 <option class="bg-black text-white"
                                                     value="{{ $country }}">{{ $country }}
@@ -96,35 +117,46 @@
                                     </div>
                                 </td>
                             </tr>
-                            <tr>
+                            <tr  class="text-start">
                                 <td colspan="2">
                                     <div class="mb-3">
                                         <label for="" class="form-label">Email</label>
                                         <input type="email"
                                             class="form-control form-control-lg bg-secondary bg-opacity-10 text-white border-top-0 border-start-0 border-end-0 "
-                                            name="" id="">
+                                            name="username" id="">
+                                        <small class="form-text text-warning fw-medium">
+                                            @error('username')
+                                                {{ $message }}
+                                            @enderror
+                                        </small>
                                     </div>
                                 </td>
                             </tr>
-                            <tr>
+                            <tr  class="text-start">
                                 <td colspan="2">
                                     <div class="mb-3">
                                         <label for="" class="form-label">Password</label>
                                         <input type="password"
                                             class="form-control form-control-lg bg-secondary bg-opacity-10 text-white border-top-0 border-start-0 border-end-0"
-                                            name="" id="" placeholder="">
+                                            name="password" id="" placeholder="">
+                                        <small class="form-text text-warning fw-medium">
+                                            @error('password')
+                                                {{ $message }}
+                                            @enderror
+                                        </small>
                                     </div>
                                 </td>
                             </tr>
+                            <input type="hidden" name="plan_id" value="{{ $plan_id }}">
                             <tr>
                                 <td colspan="2">
-                                    <div class="text-center m-1">
+                                    <div class="text-center m-1 mb-3">
                                         {{-- <a style="background-color: rgb(248, 125, 125); color: rgb(0, 0, 0); text-decoration: none;" class="px-4 py-3 reg_form_submit_button fw-bolder fs-5" href="index.html" role="submit">SIGN UP
-                      </a> --}}
-
+                                            </a> --}}
                                         <button
-                                            class="btn btn-primary px-4 py-3 reg_form_submit_button"
-                                            type="submit">SIGN UP</button>
+                                            class="btn btn-outline-danger px-4 py-3 reg_form_submit_button"
+                                            type="submit">SIGN UP
+                                        </button>
                                     </div>
                                 </td>
                             </tr>
