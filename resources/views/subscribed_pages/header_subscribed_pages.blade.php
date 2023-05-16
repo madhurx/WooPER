@@ -19,6 +19,7 @@
 
     {{--  CSS SCRIPT START  --}}
     <link href="{{ URL::asset('assets/subscribed_pages/css/styles.css') }}" rel="stylesheet" />
+    <link href="{{ URL::asset('assets/pre_loader/preloader.css') }}" rel="stylesheet" />
     {{--  CSS SCRIPT END  --}}
 
     {{--  FONT AWESOME CDN END  --}}
@@ -40,6 +41,12 @@
 </head>
 
 <body>
+
+       {{--  PRELOADER START  --}}
+       <div class="loader"></div>
+       <script src="{{ URL::asset('assets/pre_loader/preloader.js') }}"></script>
+       {{--  PRELOADER END  --}}
+    
 
     {{--  NAV BAR START  --}}
     {{-- <nav class="navbar navbar-default navbar-light bg-white sticky-top navbar_getstarted">

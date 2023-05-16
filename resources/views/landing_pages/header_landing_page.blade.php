@@ -42,6 +42,7 @@
     {{--  GOOGLE FONTS END  --}}
 
     {{--  CSS SCRIPT START  --}}
+    <link href="{{ URL::asset('assets/pre_loader/preloader.css') }}" rel="stylesheet" />
     <link href="{{ URL::asset('assets/landing_pages/css/styles.css') }}" rel="stylesheet">
     {{--  CSS SCRIPT END  --}}
 
@@ -49,6 +50,11 @@
 
 
 <body>
+        {{--  PRELOADER START  --}}
+       <div class="loader"></div>
+       <script src="{{ URL::asset('assets/pre_loader/preloader.js') }}"></script>
+        {{--  PRELOADER END  --}}
+
     <nav class="navbar navbar-dark sticky-top navbar_getstarted">
         <div class="container-fluid">
             <a class="navbar-brand" href="{{ route('get_started') }}">

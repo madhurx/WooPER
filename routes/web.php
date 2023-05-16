@@ -38,7 +38,7 @@ Route::group(['middleware' => "web"], function () {
     Route::get('/home', 'Home_Pages\Basic@index')->name('homepage_index');
 
     Route::get('/contact', 'Home_Pages\Basic@contact')->name('contact');
-    
+
     Route::get('/about', 'Home_Pages\Basic@about')->name('about');
 
     //======= HOME PAGES END
@@ -47,7 +47,7 @@ Route::group(['middleware' => "web"], function () {
 
     Route::get('/videos', 'Subscribed_pages\Basic@videos')->name('videos');
 
-    Route::get('/podcast', 'Subscribed_pages\Basic@podcasts')->name('podcasts');
+    Route::get('/podcasts', 'Subscribed_pages\Basic@podcasts')->name('podcasts');
 
     Route::get('/notes', 'Subscribed_pages\Basic@notes')->name('notes');
 
