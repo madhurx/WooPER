@@ -17,7 +17,7 @@ class Check_Plan
     public function handle($request, Closure $next)
     {
         // echo("abc");
-        // $path = $request->path();
+        // $path = $request->path();{{ {{   }}
         // if (($path == "" || $path == "login" || $path == "plans" || $path == "register") && session()->get('plan_id')) {
         //     // dd (session());
         //     // session()->flush();
@@ -34,7 +34,7 @@ class Check_Plan
             // dd(session()->all());
 
             return redirect()->route('homepage_index');
-        } elseif (($path != "/" && $path != "login" && $path != "plans" && $path != "register") && !(session()->get('plan_id'))) {
+        } elseif (($path != "/" && $path != "login" && $path != "plans" && (strpos($path, 'register'))) && !(session()->get('plan_id'))) {
             // dd(session()->all());
 
             return redirect()->route('get_login');

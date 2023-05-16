@@ -154,7 +154,7 @@
                                         {{-- <a style="background-color: rgb(248, 125, 125); color: rgb(0, 0, 0); text-decoration: none;" class="px-4 py-3 reg_form_submit_button fw-bolder fs-5" href="index.html" role="submit">SIGN UP
                                             </a> --}}
                                         <button
-                                            class="btn btn-outline-danger px-4 py-3 reg_form_submit_button"
+                                            class="btn btn-outline-danger px-2 py-2 reg_form_submit_button"
                                             type="submit">SIGN UP
                                         </button>
                                     </div>

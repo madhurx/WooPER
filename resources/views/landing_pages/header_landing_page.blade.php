@@ -51,7 +51,7 @@
 
 <body>
         {{--  PRELOADER START  --}}
-       <div class="loader"></div>
+       <div class="loader"></div>  
        <script src="{{ URL::asset('assets/pre_loader/preloader.js') }}"></script>
         {{--  PRELOADER END  --}}
 

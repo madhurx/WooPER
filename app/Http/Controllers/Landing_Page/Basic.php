@@ -18,6 +18,11 @@ class Basic extends Controller
         $title = "PLANS";
         return view('landing_pages.pricing_plans')->with(compact('title'));
     }
+    public function get_reset()
+    {
+        $title = "RESET PASSWORD";
+        return view('landing_pages.reset_pass')->with(compact('title'));
+    }
     public function view_login_page()
     {
         // if($incorrect_password != NULL)
@@ -33,7 +38,7 @@ class Basic extends Controller
         if (session()->has('incorrect_msg')) {
             $incorrect_msg = session('incorrect_msg');
             session()->flush('incorrect_msg');
-        // session()->save();
+        // session()->save();{{  }}
         }
         else{
             $incorrect_msg = NULL;
@@ -54,3 +59,4 @@ class Basic extends Controller
 
     }
 }
+{{  }}

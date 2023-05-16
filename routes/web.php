@@ -1,8 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Landing_Page\Basic;
+// use App\Http\Controllers\Landing_Page\Basic;
 use App\Http\Controllers\Landing_Page\Learner_Auth_Controller;
+// use App\Http\Controllers\Home_pages\Basic;
+// use App\Http\Controllers\Subscribed_pages\Basic;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -30,6 +33,14 @@ Route::group(['middleware' => "web"], function () {
     Route::post('/register', 'Landing_Page\Learner_Auth_Controller@register')->name('post_register');
 
     Route::post('/login', 'Landing_Page\Learner_Auth_Controller@login')->name('post_login');
+
+    Route::get('/reset', 'Landing_Page\Basic@get_reset')->name('get_reset');
+
+    Route::post('/reset/otp', 'Landing_Page\Learner_Auth_Controller@reset_otp')->name('get_reset_otp');
+
+    Route::post('/reset', 'Landing_Page\Learner_Auth_Controller@reset_pass')->name('reset_pass');
+
+
 
     //======= LANDING PAGES END
 
@@ -60,4 +71,14 @@ Route::group(['middleware' => "web"], function () {
     Route::get('/logout', 'Subscribed_pages\Basic@logout')->name('logout');
 
     //======= LOGOUT BUTTON END
+
+    //======= ADMIN PAGES START
+
+    Route::get('/admin', 'Admin\Basic@dashboard')->name('admin_dashboard');
+    Route::get('/admin/notes', 'Admin\Basic@notes_view_all')->name('notes_view_all');
+    Route::get('/admin/customers', 'Admin\Basic@customers_view_all')->name('customers_view_all');
+    // Route::get('/admin', 'Admin\Basic@dashboard')->name('admin_dashboard');
+    // Route::get('/admin', 'Admin\Basic@dashboard')->name('admin_dashboard');
+
+    //======= ADMIN PAGES END
 });
