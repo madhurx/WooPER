@@ -17,7 +17,7 @@
 
         <div class="col text-center podcast_col m-3">
             <div class="card border-0">
-                <img src="{{ URL::asset('assets/subscribed_pages/image/podcast_card_image_1.png') }}" class="card-img-top" alt="" style="width:290px; height:300px">
+                <img src="{{ URL::asset('assets/subscribed_pages/image/podcast/podcast_card_image_1.png') }}" class="card-img-top" alt="" style="width:290px; height:300px">
                 <div class="card-body">
                     <h5 class="h5 fw-200 text-center">PHP</h5>
                     <p class="card-text text-center">
@@ -33,7 +33,7 @@
 
         <div class="col text-center podcast_col m-3">
             <div class="card border-0">
-                <img src="{{ URL::asset('assets/subscribed_pages/image/podcast_card_image_2.png') }}" class="card-img-top" alt="" style="width:290px; height:300px">
+                <img src="{{ URL::asset('assets/subscribed_pages/image/podcast/podcast_card_image_2.png') }}" class="card-img-top" alt="" style="width:290px; height:300px">
                 <div class="card-body">
                     <h5 class="h5 fw-200 text-center">PHP</h5>
                     <p class="card-text text-center">
@@ -49,7 +49,7 @@
 
         <div class="col text-center podcast_col m-3">
             <div class="card border-0">
-                <img src="{{ URL::asset('assets/subscribed_pages/image/podcast_card_image_3.png') }}" class="card-img-top" alt="" style="width:290px; height:300px">
+                <img src="{{ URL::asset('assets/subscribed_pages/image/podcast/podcast_card_image_3.png') }}" class="card-img-top" alt="" style="width:290px; height:300px">
                 <div class="card-body">
                     <h5 class="h5 fw-200 text-center">PHP</h5>
                     <p class="card-text text-center">
@@ -65,7 +65,7 @@
         
         <div class="col text-center podcast_col m-3">
             <div class="card border-0">
-                <img src="{{ URL::asset('assets/subscribed_pages/image/podcast_card_image_3.png') }}" class="card-img-top" alt="" style="width:290px; height:300px">
+                <img src="{{ URL::asset('assets/subscribed_pages/image/podcast/podcast_card_image_3.png') }}" class="card-img-top" alt="" style="width:290px; height:300px">
                 <div class="card-body">
                     <h5 class="h5 fw-200 text-center">PHP</h5>
                     <p class="card-text text-center">
@@ -81,7 +81,7 @@
 
         <div class="col text-center podcast_col m-3">
             <div class="card border-0">
-                <img src="{{ URL::asset('assets/subscribed_pages/image/podcast_card_image_1.png') }}" class="card-img-top" alt="" style="width:290px; height:300px">
+                <img src="{{ URL::asset('assets/subscribed_pages/image/podcast/podcast_card_image_1.png') }}" class="card-img-top" alt="" style="width:290px; height:300px">
                 <div class="card-body">
                     <h5 class="h5 fw-200 text-center">PHP</h5>
                     <p class="card-text text-center">
@@ -97,7 +97,7 @@
 
         <div class="col text-center podcast_col m-3">
             <div class="card border-0">
-                <img src="{{ URL::asset('assets/subscribed_pages/image/podcast_card_image_2.png') }}" class="card-img-top" alt="" style="width:290px; height:300px">
+                <img src="{{ URL::asset('assets/subscribed_pages/image/podcast/podcast_card_image_2.png') }}" class="card-img-top" alt="" style="width:290px; height:300px">
                 <div class="card-body">
                     <h5 class="h5 fw-200 text-center">PHP</h5>
                     <p class="card-text text-center">
@@ -113,7 +113,7 @@
 
         <div class="col text-center podcast_col m-3">
             <div class="card border-0">
-                <img src="{{ URL::asset('assets/subscribed_pages/image/podcast_card_image_2.png') }}" class="card-img-top" alt="" style="width:290px; height:300px">
+                <img src="{{ URL::asset('assets/subscribed_pages/image/podcast/podcast_card_image_2.png') }}" class="card-img-top" alt="" style="width:290px; height:300px">
                 <div class="card-body">
                     <h5 class="h5 fw-200 text-center">PHP</h5>
                     <p class="card-text text-center">
@@ -129,7 +129,7 @@
 
         <div class="col text-center podcast_col m-3">
             <div class="card border-0">
-                <img src="{{ URL::asset('assets/subscribed_pages/image/podcast_card_image_3.png') }}" class="card-img-top" alt="" style="width:290px; height:300px">
+                <img src="{{ URL::asset('assets/subscribed_pages/image/podcast/podcast_card_image_3.png') }}" class="card-img-top" alt="" style="width:290px; height:300px">
                 <div class="card-body">
                     <h5 class="h5 fw-200 text-center">PHP</h5>
                     <p class="card-text text-center">
@@ -145,7 +145,7 @@
 
         <div class="col text-center podcast_col m-3">
             <div class="card border-0">
-                <img src="{{ URL::asset('assets/subscribed_pages/image/podcast_card_image_1.png') }}" class="card-img-top" alt="" style="width:290px; height:300px">
+                <img src="{{ URL::asset('assets/subscribed_pages/image/podcast/podcast_card_image_1.png') }}" class="card-img-top" alt="" style="width:290px; height:300px">
                 <div class="card-body">
                     <h5 class="h5 fw-200 text-center">PHP</h5>
                     <p class="card-text text-center">

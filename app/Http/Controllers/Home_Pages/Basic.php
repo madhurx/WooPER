@@ -9,6 +9,20 @@ class Basic extends Controller
 {
     public function index()
     {
-        return view('home_pages.home');
+        $title = "HOME";
+        $plan_id = session('plan_id') ?? 0;
+        return view('home_pages.home')->with(compact('plan_id','title'));
+    }
+    public function contact()
+    {
+        $title = "CONTACT";
+        $plan_id = session('plan_id') ?? 0;
+        return view('home_pages.contact')->with(compact('plan_id','title'));
+    }
+    public function about()
+    {
+        $title = "ABOUT";
+        $plan_id = session('plan_id') ?? 0;
+        return view('home_pages.about')->with(compact('plan_id','title'));
     }
 }

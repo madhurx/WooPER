@@ -31,7 +31,7 @@ class Basic extends Controller
         // session()->save();
         // dd($incorrect_password);
         if (session()->has('incorrect_msg')) {
-            $inc = session('incorrect_msg');
+            $incorrect_msg = session('incorrect_msg');
             session()->flush('incorrect_msg');
         // session()->save();
         }

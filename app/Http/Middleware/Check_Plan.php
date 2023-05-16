@@ -27,6 +27,20 @@ class Check_Plan
 
         //     return $next($request);
         // }
-        return $next($request);
+
+        $path = $request->path();
+        echo $path;
+        if (($path == "/" || $path == "login" || $path == "plans" || $path == "register") && session()->has('plan_id')) {
+            // dd(session()->all());
+
+            return redirect()->route('homepage_index');
+        } else if (($path != "/" && $path != "login" && $path != "plans" && $path != "register") && !(session()->get('plan_id'))) {
+            // dd(session()->all());
+
+            return redirect()->route('get_login');
+        } else {
+            
+            return $next($request);
+        }
     }
 }

@@ -37,25 +37,27 @@ Route::group(['middleware' => "web"], function () {
 
     Route::get('/home', 'Home_Pages\Basic@index')->name('homepage_index');
 
+    Route::get('/contact', 'Home_Pages\Basic@contact')->name('contact');
+    
+    Route::get('/about', 'Home_Pages\Basic@about')->name('about');
+
     //======= HOME PAGES END
 
     //======= SUBSCRIBED PAGES START
 
-    Route::get('/videos', function () {
-        return view('subscribed_pages.videos');
-    })->name('videos');
+    Route::get('/videos', 'Subscribed_pages\Basic@videos')->name('videos');
 
-    Route::get('/podcast', function () {
-        return view('subscribed_pages.podcasts');
-    })->name('podcasts');
+    Route::get('/podcast', 'Subscribed_pages\Basic@podcasts')->name('podcasts');
 
-    Route::get('/notes', function () {
-        return view('subscribed_pages.notes');
-    })->name('notes');
+    Route::get('/notes', 'Subscribed_pages\Basic@notes')->name('notes');
 
-    Route::get('/blogs', function () {
-        return view('subscribed_pages.blogs');
-    })->name('blogs');
+    Route::get('/blogs', 'Subscribed_pages\Basic@blogs')->name('blogs');
 
     //======= SUBSCRIBED PAGES END
+
+    //======= LOGOUT BUTTON START
+
+    Route::get('/logout', 'Subscribed_pages\Basic@logout')->name('logout');
+
+    //======= LOGOUT BUTTON END
 });

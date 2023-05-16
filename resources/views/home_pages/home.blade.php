@@ -14,7 +14,7 @@
             </p>
         </div>
         <div class="col m-3 text-center">
-            <img src="homepage_main_image.PNG" class="img-fluid rounded-top" alt="">
+            <img src="{{  URL::asset('assets/home_pages/image/homepage_main_image.PNG') }}" class="img-fluid rounded-top" alt="">
         </div>
 
     </div>
@@ -31,17 +31,17 @@
         </div>
     </div>
     <div class="row justify-content-center align-items-center text-center py-1 mx-1  ">
-        <div class="col"><img src="client_images/microsoft.png" class="img-fluid rounded-top"
+        <div class="col"><img src="{{  URL::asset('assets/home_pages/image/client_images/microsoft.png') }}" class="img-fluid rounded-top"
                 width="130px" height="60px" alt=""></div>
-        <div class="col"><img src="client_images/adobe.png" class="img-fluid rounded-top"
+        <div class="col"><img src="{{  URL::asset('assets/home_pages/image/client_images/adobe.png') }}" class="img-fluid rounded-top"
                 width="130px" height="60px" alt=""></div>
-        <div class="col"><img src="client_images/ibm.png" class="img-fluid rounded-top"
+        <div class="col"><img src="{{  URL::asset('assets/home_pages/image/client_images/ibm.png') }}" class="img-fluid rounded-top"
                 width="130px" height="50px" alt=""></div>
-        <div class="col"><img src="client_images/salesforce.png" class="img-fluid rounded-top"
+        <div class="col"><img src="{{  URL::asset('assets/home_pages/image/client_images/salesforce.png') }}" class="img-fluid rounded-top"
                 width="130px" height="50px" alt=""></div>
-        <div class="col"><img src="client_images/sap.png" class="img-fluid rounded-top"
+        <div class="col"><img src="{{  URL::asset('assets/home_pages/image/client_images/sap.png') }}" class="img-fluid rounded-top"
                 width="130px" height="50px" alt=""></div>
-        <div class="col"><img src="client_images/oracle.png" class="img-fluid rounded-top"
+        <div class="col"><img src="{{  URL::asset('assets/home_pages/image/client_images/oracle.png') }}" class="img-fluid rounded-top"
                 width="130px" height="60px" alt=""></div>
     </div>
 </div>

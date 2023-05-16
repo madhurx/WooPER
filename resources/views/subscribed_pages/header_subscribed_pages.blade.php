@@ -42,11 +42,48 @@
 <body>
 
     {{--  NAV BAR START  --}}
-    <nav class="navbar navbar-default navbar-light bg-white sticky-top navbar_getstarted">
+    {{-- <nav class="navbar navbar-default navbar-light bg-white sticky-top navbar_getstarted">
         <div class="container-fluid">
             <a class="navbar-brand" href="">
-                <img src="Wooper_logo_black.PNG" alt="" class="logo" />
+                <img src="{{  URL::asset('assets/subscribed_page/image/Wooper_logo_black.PNG') }}" alt="" class="logo" />
             </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#mynavbarrr">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="mynavbarrr">
+                <ul class="navbar-nav navbar-nav">
+
+                    <li class="nav-item fw-medium">
+                        <a class="nav-link" href="{{  route('homepage_index')}}">Home</a>
+                    </li>
+                    <li class="nav-item fw-medium">
+                        <a class="nav-link" href="{{  route('about')}}">About</a>
+                    </li>
+                    <li class="nav-item fw-medium">
+                        <a class="nav-link" href="{{  route('contact')}}">Contact</a>
+                    </li>
+                    <li class="nav-item dropdown fw-medium">
+                        <a class="nav-link dropdown-toggle" href="#" role="button"
+                            data-bs-toggle="dropdown" data-bs-display="static"
+                            aria-expanded="false">Resources</a>
+                        <ul class="dropdown-menu dropdown-menu-start">
+                            @if ($plan_id >= 1)
+                                <li><a class="dropdown-item" href="#">Blogs</a></li>
+                            @endif
+                            @if ($plan_id >= 2)
+                                <li><a class="dropdown-item" href="#">Notes</a></li>
+                            @endif
+                            @if ($plan_id >= 3)
+                                <li><a class="dropdown-item" href="#">Podcasts</a></li>
+                            @endif
+                            @if ($plan_id >= 4)
+                                <li><a class="dropdown-item" href="#">Videos</a></li>
+                            @endif
+                        </ul>
+                    </li>
+                </ul>
+            </div>
             <div class="mx-5">
                 <button class="btn btn-outline-dark rounded-pill btn-sm get_started_signin_btn"
                     type="button">
@@ -54,5 +91,58 @@
                 </button>
             </div>
         </div>
+    </nav> --}}
+
+    <nav class="navbar navbar-light bg-white sticky-top navbar_getstarted navbar-expand-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="">
+                <img src="{{ URL::asset('assets/home_pages/image/Wooper_logo_black.PNG') }}"
+                    alt="" class="logo" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#mynavbarr">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="mynavbarr">
+                <ul class="navbar-nav navbar-nav">
+
+                    <li class="nav-item fw-medium">
+                        <a class="nav-link" href="{{ route('homepage_index') }}">Home</a>
+                    </li>
+                    <li class="nav-item fw-medium">
+                        <a class="nav-link" href="{{ route('about') }}">About</a>
+                    </li>
+                    <li class="nav-item fw-medium">
+                        <a class="nav-link" href="{{ route('contact') }}">Contact</a>
+                    </li>
+                    <li class="nav-item dropdown fw-medium">
+                        <a class="nav-link dropdown-toggle" href="#" role="button"
+                            data-bs-toggle="dropdown" data-bs-display="static"
+                            aria-expanded="false">Resources</a>
+                        <ul class="dropdown-menu dropdown-menu-start">
+                            @if ($plan_id >= 1)
+                                <li><a class="dropdown-item" href="{{ route('blogs') }}">Blogs</a></li>
+                            @endif
+                            @if ($plan_id >= 2)
+                                <li><a class="dropdown-item" href="{{ route('notes') }}">Notes</a></li>
+                            @endif
+                            @if ($plan_id >= 3)
+                                <li><a class="dropdown-item" href="{{ route('podcasts') }}">Podcasts</a></li>
+                            @endif
+                            @if ($plan_id >= 4)
+                                <li><a class="dropdown-item" href="{{ route('videos') }}">Videos</a></li>
+                            @endif
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="mx-5">
+                <a href="{{ route('logout') }}" class="btn btn-outline-dark rounded-pill btn-sm get_started_signin_btn"
+                    type="button">
+                    SIGN OUT
+                </a>
+            </div>
+        </div>
     </nav>
+
     {{--  NAV BAR END  --}}

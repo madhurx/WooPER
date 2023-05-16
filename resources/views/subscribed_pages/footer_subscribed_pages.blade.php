@@ -7,7 +7,7 @@
          <div class="col fw-medium">Designed by Madhur Gupta</div>
          <div class="col">All Rights Reserved</div>
          <div class="col">
-             <img src="footer.jpg" class="img-fluid rounded-top" width="130px" height="60px"
+             <img src="{{  URL::asset('assets/subscribed_pages/image/footer.jpg') }}" class="img-fluid rounded-top" width="130px" height="60px"
                  alt="" />
          </div>
 
@@ -21,6 +21,14 @@
  </div>
 
  {{-- FOOTER SECTION END --}}
+
+ {{--  SCRIPTS START  --}}
+
+<script src="{{ url('https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js') }}">
+</script>
+
+{{--  SCRIPTS START  --}}
+
  </body>
 
  </html>

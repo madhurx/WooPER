@@ -12,7 +12,7 @@
     @if (@isset($title))
         <title>{{ $title }}</title>
     @else
-        <title>WOOPERRR</title>
+        <title>WOOPER</title>
     @endif
     {{-- PHP = check title existance end --}}
 

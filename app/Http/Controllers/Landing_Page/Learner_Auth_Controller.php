@@ -29,7 +29,7 @@ class Learner_Auth_Controller extends Controller
         $table_learner->password = $request->password;
         $table_learner->plan_id = $request->plan_id;
         if ($table_learner->save()) {
-            return redirect()->action('Landing_Page\Basic@login');
+            return redirect()->action('Landing_Page\Basic@view_login_page');
         } else {
             return redirect()->route('pricing_plans');
         }

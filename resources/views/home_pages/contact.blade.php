@@ -10,8 +10,7 @@
                 <div style="width: 100%; border-bottom: 3px solid red; border-radius: 2px;">
                     <iframe width="100%" height="300" frameborder="0" scrolling="no"
                         marginheight="0" marginwidth="0"
-                        src="{{ url('https://maps.google.com/maps?width=100%25&amp;height=300&amp;hl=en&amp;q=%20164,%20A%20Block,%20Sector%2063,%20Noida,%20Uttar%20Pradesh%20201301+(Mawai%20Infotech)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a
-                            href="https://www.gps.ie/sport-gps/') }}">fitness tracker</a></iframe>
+                        src="https://maps.google.com/maps?width=100%25&amp;height=300&amp;hl=en&amp;q=%20164,%20A%20Block,%20Sector%2063,%20Noida,%20Uttar%20Pradesh%20201301+(Mawai%20Infotech)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
                 </div>
                 <div class="card-body mt-3">
                     <div class="card-text">
@@ -48,7 +47,7 @@
             </div>
         </div>
         <div class="col mx-3 my-5 p-5 text-center">
-            <img src="contactus_image.png" class="img-fluid rounded-top" alt="" />
+            <img src="{{  URL::asset('assets/home_pages/image/contactus_image.PNG') }}" class="img-fluid rounded-top" alt="" />
         </div>
     </div>
 </div>

@@ -31,7 +31,7 @@
         </p>
       </div>
       <div class="col mx-3 my-5 text-center">
-        <img src="aboutus_image.PNG" class="img-fluid rounded-top" alt="" />
+        <img src="{{  URL::asset('assets/home_pages/image/aboutus_image.PNG') }}" class="img-fluid rounded-top" alt="" />
       </div>
     </div>
   </div>

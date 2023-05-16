@@ -6,7 +6,7 @@
         <div class="col fw-medium">Designed by Madhur Gupta</div>
         <div class="col">Terms & Privacy Policy</div>
         <div class="col">All Rights Reserved</div>
-        <div class="col"><img src="footer.jpg" class="img-fluid rounded-top" width="130px"
+        <div class="col"><img src="{{  URL::asset('assets/home_pages/image/footer.jpg') }}" class="img-fluid rounded-top" width="130px"
                 height="60px" alt=""></div>
 
         <div class="col">
