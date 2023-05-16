@@ -2,27 +2,27 @@
 <html lang="en">
 
 <head>
-    {-- BASIC TAGS START --}}
+    {{-- BASIC TAGS START --}}
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>TITLEEEEEEEEE</title>
-    {-- BASIC TAGS END --}}
+    {{-- BASIC TAGS END --}}
 
-    {-- BOOTSTRAP CDN START --}}
+    {{-- BOOTSTRAP CDN START --}}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
         rel="stylesheet"
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
         crossorigin="anonymous" />
-    {-- BOOTSTRAP CDN END --}}
+    {{-- BOOTSTRAP CDN END --}}
 
-    {-- FONT AWESOME CDN END --}}
+    {{-- FONT AWESOME CDN END --}}
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
-    {-- FONT AWESOME CDN END --}}
+    {{-- FONT AWESOME CDN END --}}
 
-    {-- GOOGLE FONTS START --}}
+    {{-- GOOGLE FONTS START --}}
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -31,15 +31,15 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Anton&family=Cookie&family=Crimson+Text&family=Poppins:wght@500&display=swap"
         rel="stylesheet" />
-    {-- GOOGLE FONTS END --}}
+    {{-- GOOGLE FONTS END --}}
 
-    {-- CSS SCRIPT START --}}
+    {{-- CSS SCRIPT START --}}
     <link href="styles.css" rel="stylesheet" />
-    {-- CSS SCRIPT END --}}
+    {{-- CSS SCRIPT END --}}
 </head>
 
 <body>
-    {-- NAV START --}}
+    {{-- NAV START --}}
     <nav class="navbar navbar-light bg-white sticky-top navbar_getstarted navbar-expand-sm">
         <div class="container-fluid">
             <a class="navbar-brand" href="">
@@ -80,19 +80,19 @@
             </div>
         </div>
     </nav>
-    {-- NAV END --}}
+    {{-- NAV END --}}
 
-    {-- MAIN SECTION START--}}
+    {{-- MAIN SECTION START --}}
 
     <div class="container-fluid ps-0 min-vh-100 ">
         <div class="row min-vh-100">
 
-            {-- SIDEBAR COL START --}}
+            {{-- SIDEBAR COL START --}}
 
             <div class="col-2 bg-black">
                 <div class="row p-3 w-100">
                     <div class="col py-4 text-white" style="width: 202px; position: fixed; top: 60">
-                        {-- --}}
+                        {{-- --}}
 
                         <h1 class="h4 text-center">
                             <i class="fa-solid fa-globe"></i>&nbsp;MENU
@@ -169,18 +169,18 @@
                             </li>
                         </ul>
 
-                        {-- --}}
+                        {{-- --}}
                     </div>
                 </div>
             </div>
 
-            {-- SIDEBAR COL END --}}
+            {{-- SIDEBAR COL END --}}
 
-            {-- CONTENT COL START --}}
+            {{-- CONTENT COL START --}}
 
             <div class="col-10 px-3">
 
-                {-- NAV BAR START --}}
+                {{-- NAV BAR START --}}
 
                 <div
                     class="row-cols-1 row justify-content-center align-items-center text-white py-4 content_navbar">
@@ -203,9 +203,9 @@
                         </nav>
                     </div>
                 </div>
-                {-- NAV BAR END --}}
+                {{-- NAV BAR END --}}
 
-                {-- TABLE START --}}
+                {{-- TABLE START --}}
 
                 <div class="row row-cols-1 justify-content-center align-items-center g-2 my-3 ">
                     <div class="col">
@@ -242,7 +242,7 @@
                                                     role="button">Edit</a>
                                             </td>
                                             <td>
-                                                {-- Delete Button trigger modal --}}
+                                                {{-- Delete Button trigger modal --}}
                                                 <button type="button"
                                                     class="btn btn-outline-danger"
                                                     data-bs-toggle="modal"
@@ -250,7 +250,7 @@
                                                     Delete
                                                 </button>
 
-                                                {-- Modal --}}
+                                                {{-- Modal --}}
                                                 <div class="modal fade"
                                                     id="deleteModal{{ $val->instructor_id }}"
                                                     tabindex="-1"
@@ -298,19 +298,19 @@
                 </div>
 
 
-                {-- TABLE END --}}
+                {{-- TABLE END --}}
 
 
             </div>
 
-            {-- CONTENT COL END --}}
+            {{-- CONTENT COL END --}}
 
         </div>
     </div>
 
-    {-- MAIN SECTION END--}}
+    {{-- MAIN SECTION END --}}
 
-    {-- FOOTER SECTION START--}}
+    {{-- FOOTER SECTION START --}}
 
     <div class="container-fluid footer_container pb-2 pt-2">
         <div class="row justify-content-center align-items-center g-2 text-center">
@@ -332,11 +332,11 @@
         </div>
     </div>
 
-    {-- FOOTER SECTION END--}}
+    {{-- FOOTER SECTION END --}}
 
-    {-- FONT AWESOME START--}}
+    {{-- FONT AWESOME START --}}
     <script src="https://kit.fontawesome.com/3d0e7e114f.js" crossorigin="anonymous"></script>
-    {-- FONT AWESOME END--}}
+    {{-- FONT AWESOME END --}}
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
