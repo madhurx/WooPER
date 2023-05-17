@@ -80,10 +80,12 @@ class Learner_Auth_Controller extends Controller
             $details = ['otp' => $otp];
             $reset_otp_obj = new Reset_OTP($details);
             Mail::to($username)->send($reset_otp_obj);
-            
-            return back()->with(['incorrect_msg' => 'OTP sent!']);
+
+            $incorrect_msg = "OTP sent!";
+            return redirect()->back()->withInput(['incorrect_msg'=>$incorrect_msg, 'username'=>$username]);
         } else {
-            return redirect()->route('get_reset')->with(compact(['incorrect_msg' => 'Username not found, Please enter registered Username']));
+            $incorrect_msg = "Username not found, Please enter registered Username";
+            return redirect()->back()->withInput(['incorrect_msg'=>$incorrect_msg, 'username'=>$username]);
         }
     }
 
@@ -104,25 +106,26 @@ class Learner_Auth_Controller extends Controller
         if ($row = $table_learner->where('username', $username)->first()) {
             if ($row->otp == $otp) {
                 $table_learner->where('id', $row->id)->update(['password' => $pass]);
+                $table_learner->where('id', $row->id)->update(['otp' => NULL]);
                 return redirect()->back()->with(['incorrect_msg' => 'Password Updated, Please login!']);
             } else {
-                return redirect()->back()->with(['incorrect_msg' => 'Incorrect OTP!']);
+                return redirect()->back()->withInput(['incorrect_msg' => 'Incorrect OTP!']);
             }
         } else {
-            return redirect()->route('get_reset')->with(compact(['incorrect_msg' => 'Username not found, Please enter registered Username']));
+            return redirect()->route('get_reset')->withInput(['incorrect_msg' => 'Username not found, Please enter registered Username']);
         }
     }
 
-    public function send_mail()
-    {
-        $details = ['otp' => 2545];
-        $username = "madhurmawai@gmail.com";
-        $reset_otp_obj = new Reset_OTP($details);
-        Mail::to($username)->send($reset_otp_obj);
-        echo ("Mail sent");
+    // public function send_mail()
+    // {
+    //     $details = ['otp' => 2545];
+    //     $username = "madhurmawai@gmail.com";
+    //     $reset_otp_obj = new Reset_OTP($details);
+    //     Mail::to($username)->send($reset_otp_obj);
+    //     echo ("Mail sent");
         //     Mail::send(' ', $data, function ($message) {
         //         $message->to('username');
         //         $message->subject("WOOPER account password reset OTP");
         //     });
-    }
+    // }
 }

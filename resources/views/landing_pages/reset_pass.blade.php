@@ -1,7 +1,6 @@
 @include('landing_pages.header_landing_page')
 
 
-
 {{-- MAIN SECTION START --}}
 <div class="container">
     <div class="row justify-content-center my-5">
@@ -37,33 +36,34 @@
                         <div class="input-group input-group-lg mb-2">
                             <span class="input-group-text bg-danger-subtle border-2"><i
                                     class="fa fa-user"></i></span>
-                            <input type="email" name="username" value="{{old('username')}}"
+                            <input type="email" name="username" value="{{ old('username') }}"
                                 class="form-control form-control-lg bg-secondary bg-opacity-10 text-white border-start-0 border-top-0 border-bottom-0" />
-                                <small class="form-text text-warning fw-medium">
-                                    @error('username')
-                                        {{ $message }}
-                                    @enderror
-                                </small>
+                                
                         </div>
+                        <small class="form-text text-warning fw-medium">
+                            @error('username')
+                                {{ $message }}
+                            @enderror
+                        </small>
 
                         <div class="text-center mb-2">
                             <button type="submit" formaction="{{ url('/') }}/reset/otp"
                                 class="btn btn-outline-danger px-1 py-0 reg_form_submit_button">
-                                GET OTP <i class="fa fa-arrow-right"></i>
+                                GET OTP <i class="fa-solid fa-arrow-trend-up"></i>
                             </button>
                         </div>
 
                         <div class="input-group input-group-lg mb-3">
-                            <span class="input-group-text bg-danger-subtle border-2"><i
-                                    class="fa fa-lock"></i></span>
+                            <span class="input-group-text bg-danger-subtle border-2"><i class="fa-solid fa-key"></i></span>
                             <input type="otp" name="otp" 
                                 class="form-control form-control-lg bg-secondary bg-opacity-10 text-white border-start-0 border-top-0 border-bottom-0" />
-                                <small class="form-text text-warning fw-medium">
-                                    @error('otp')
-                                        {{ $message }}
-                                    @enderror
-                                </small>
+                                
                         </div>
+                        <small class="form-text text-warning fw-medium">
+                            @error('otp')
+                                {{ $message }}
+                            @enderror
+                        </small>
 
 
                         <div class="input-group input-group-lg mb-3">
@@ -71,19 +71,19 @@
                                     class="fa fa-lock"></i></span>
                             <input type="password" name="password"
                                 class="form-control form-control-lg bg-secondary bg-opacity-10 text-white border-start-0 border-top-0 border-bottom-0" />
-                                <small class="form-text text-warning fw-medium">
-                                    @error('password')
-                                        {{ $message }}
-                                    @enderror
-                                </small>
                         </div>
+                        <small class="form-text text-warning fw-medium">
+                            @error('password')
+                                {{ $message }}
+                            @enderror
+                        </small>
 
                        
-                            @if(isset($incorrect_msg))
+                            {{--  @if(isset($incorrect_msg))  --}}
                             <div class="text-warning">
-                                {{  $incorrect_msg }}
+                                {{  old('incorrect_msg') }}
                             </div>
-                            @endif
+                            {{--  @endif  --}}
                         
 
                         <div class="text-center my-4">
