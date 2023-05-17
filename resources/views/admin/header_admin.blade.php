@@ -77,10 +77,10 @@
                 </ul>
             </div>
             <div class="mx-5">
-                <button class="btn btn-outline-dark rounded-pill btn-sm get_started_signin_btn"
+                <a href="{{ route('logout') }}" class="btn btn-outline-dark rounded-pill btn-sm get_started_signin_btn"
                     type="button">
                     SIGN OUT
-                </button>
+                </a>
             </div>
         </div>
     </nav>
@@ -128,13 +128,15 @@
                                     <div class="">
                                         <ul style="list-style: none">
                                             <li class="my-1"><i
-                                                    class="fa-solid fa-users"></i>&nbsp;Customers
+                                                    class="fa-solid fa-users"></i>&nbsp;
+                                                    <a name="" id="" class="text-decoration-none text-white" href="{{ route('customers_view_all') }}" role="button">Customers</a>
                                             </li>
                                             <li class="my-1"><i
-                                                    class="fa-regular fa-lightbulb"></i>&nbsp;Plans
+                                                    class="fa-regular fa-lightbulb"></i>&nbsp;&nbsp;
+                                                    <a name="" id="" class="text-decoration-none text-white" href="{{ route('view_plans') }}" role="button"> Plans</a>
                                             </li>
                                             <li class="my-1"><i
-                                                    class="fa-solid fa-house-user"></i>&nbsp;Homepage
+                                                    class="fa-solid fa-house-user"></i>&nbsp;&nbsp;<a name="" id="" class="text-decoration-none text-white" href="{{ route('customers_view_all') }}" role="button">HomePage</a>
                                             </li>
                                         </ul>
                                     </div>

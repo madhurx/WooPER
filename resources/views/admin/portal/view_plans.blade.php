@@ -15,7 +15,11 @@
                     <ul class="navbar-nav">
 
                         <li class="nav-item">
-                            <a class="nav-link active" href="">All Learners</a>
+                            <a href="{{ route('view_plans') }}" class="nav-link active" href="">View Plans</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="{{ route('create_plans') }}" class="nav-link" href="">Add Plan</a>
                         </li>
 
                     </ul>
@@ -47,26 +51,12 @@
                         </tr>
                     </thead>
                     <tbody class="table-group-divider">
-                        @foreach ($users as $val)
+                        
                             <tr class="table-primary">
-                                <td>{{ $val->first_name }} {{ $val->last_name }}</td>
-                                <td>{{ $val->gender }}</td>
-                                <td>
-                                    @if ($val->plan_id == 1)
-                                        Basic
-                                    @elseif ($val->plan_id == 2)
-                                        Starter
-                                    @elseif ($val->plan_id == 3)
-                                        Builder
-                                    @elseif ($val->plan_id == 4)
-                                        Expert
-                                    @endif
-                                </td>
-                                <td>{{ $val->country }}</td>
-                                <td>{{ $val->username }}</td>
+                                
 
                             </tr>
-                        @endforeach
+                        
                     </tbody>
                     <tfoot>
 

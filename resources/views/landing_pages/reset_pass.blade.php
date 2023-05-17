@@ -88,8 +88,8 @@
 
                         <div class="text-center my-4">
                             <button type="submit"
-                                class="btn btn-outline-danger px-2 py-2 reg_form_submit_button">
-                                SIGN IN <i class="fa fa-arrow-right"></i>
+                                class="btn btn-outline-danger px-1 py-1 reg_form_submit_button">
+                                UPDATE
                             </button>
                         </div>
                     </form>

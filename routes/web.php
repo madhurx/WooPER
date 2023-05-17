@@ -75,8 +75,17 @@ Route::group(['middleware' => "web"], function () {
     //======= ADMIN PAGES START
 
     Route::get('/admin', 'Admin\Basic@dashboard')->name('admin_dashboard');
+
     Route::get('/admin/notes', 'Admin\Basic@notes_view_all')->name('notes_view_all');
+
     Route::get('/admin/customers', 'Admin\Basic@customers_view_all')->name('customers_view_all');
+
+    Route::get('/admin/add-plan', 'Admin\Basic@create_plans')->name('create_plans');
+
+    Route::post('/admin/add-plan', 'Admin\Basic@create_plans')->name('create_plans');
+
+    Route::get('/admin/plans', 'Admin\Basic@view_plans')->name('view_plans');
+
     // Route::get('/admin', 'Admin\Basic@dashboard')->name('admin_dashboard');
     // Route::get('/admin', 'Admin\Basic@dashboard')->name('admin_dashboard');
 

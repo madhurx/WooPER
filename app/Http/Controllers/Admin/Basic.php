@@ -26,4 +26,10 @@ class Basic extends Controller
         // dd($users);
         return view('admin.portal.customers_view_all')->with(compact('users','title'));
     }
+    public function view_plans(){
+        return view('admin.portal.view_plans');
+    }
+    public function create_plans(){
+        return view('admin.portal.create_plans');
+    }
 }
