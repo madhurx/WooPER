@@ -40,7 +40,7 @@ Route::group(['middleware' => "web"], function () {
 
     Route::post('/reset', 'Landing_Page\Learner_Auth_Controller@reset_pass')->name('reset_pass');
 
-
+    // Route::get('/reset', 'Landing_Page\Learner_Auth_Controller@send_mail')->name('reset_pass');
 
     //======= LANDING PAGES END
 

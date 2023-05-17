@@ -9,13 +9,12 @@
         <div class="col-7 mx-1">
             <div class="my-5 text-white">
                 <div class="h1 fw-bolder fa-3x">
-                    Don't Worry, We got your back!!
+                    Do not Worry, We got your back!!
                 </div>
                 <div>
                     <p class="fw-bold text-white my-5">
                         Good to see you again!<br />
-                        By logging into Wooper, you agree to our Terms of use and
-                        Privacy Policy.<br />
+                        By logging into Wooper, you agree to our Terms of useand Privacy Policy. <br/>
                         Or
                         <span><a href="{{route('pricing_plans')}}" style="text-decoration: none">click
                                 here</a></span>
@@ -35,7 +34,7 @@
                 <div class="reg_form_div">
                     <form method="post" action="{{ url('/') }}/reset">
                         @csrf
-                        <div class="input-group input-group-lg mb-3">
+                        <div class="input-group input-group-lg mb-2">
                             <span class="input-group-text bg-danger-subtle border-2"><i
                                     class="fa fa-user"></i></span>
                             <input type="email" name="username" value="{{old('username')}}"
@@ -47,9 +46,9 @@
                                 </small>
                         </div>
 
-                        <div class="text-center my-4">
+                        <div class="text-center mb-2">
                             <button type="submit" formaction="{{ url('/') }}/reset/otp"
-                                class="btn btn-outline-danger px-2 py-2 reg_form_submit_button">
+                                class="btn btn-outline-danger px-1 py-0 reg_form_submit_button">
                                 GET OTP <i class="fa fa-arrow-right"></i>
                             </button>
                         </div>

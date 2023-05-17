@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Landing_Page;
 use App\Http\Controllers\Controller;
 use App\Models\Learners;
 use Illuminate\Http\Request;
+use App\Mail\Reset_OTP;
+use Illuminate\Support\Facades\Mail;
 
 class Learner_Auth_Controller extends Controller
 {
@@ -74,7 +76,12 @@ class Learner_Auth_Controller extends Controller
         $otp = rand(1000, 9999);
         if ($table_learner->where('username', $username)->first()) {
             $table_learner->where('username', $username)->update(['otp' => $otp]);
-            return redirect()->back()->with(['incorrect_msg' => 'OTP sent!']);
+
+            $details = ['otp' => $otp];
+            $reset_otp_obj = new Reset_OTP($details);
+            Mail::to($username)->send($reset_otp_obj);
+            
+            return back()->with(['incorrect_msg' => 'OTP sent!']);
         } else {
             return redirect()->route('get_reset')->with(compact(['incorrect_msg' => 'Username not found, Please enter registered Username']));
         }
@@ -104,5 +111,18 @@ class Learner_Auth_Controller extends Controller
         } else {
             return redirect()->route('get_reset')->with(compact(['incorrect_msg' => 'Username not found, Please enter registered Username']));
         }
+    }
+
+    public function send_mail()
+    {
+        $details = ['otp' => 2545];
+        $username = "madhurmawai@gmail.com";
+        $reset_otp_obj = new Reset_OTP($details);
+        Mail::to($username)->send($reset_otp_obj);
+        echo ("Mail sent");
+        //     Mail::send(' ', $data, function ($message) {
+        //         $message->to('username');
+        //         $message->subject("WOOPER account password reset OTP");
+        //     });
     }
 }

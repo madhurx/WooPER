@@ -30,11 +30,11 @@ class Check_Plan
 
         $path = $request->path();
         // echo $path;
-        if (($path == "/" || $path == "login" || $path == "plans" || $path == "register") && session()->has('plan_id')) {
+        if (($path == "/" || $path == "login" || $path == "plans"|| $path == "reset" || $path == "register") && session()->has('plan_id')) {
             // dd(session()->all());
 
             return redirect()->route('homepage_index');
-        } elseif (($path != "/" && $path != "login" && $path != "plans" && (strpos($path, 'register'))) && !(session()->get('plan_id'))) {
+        } elseif (($path != "/" && $path != "login" && $path != "plans" && $path != "reset"  && (strpos($path, 'register'))) && !(session()->get('plan_id'))) {
             // dd(session()->all());
 
             return redirect()->route('get_login');
