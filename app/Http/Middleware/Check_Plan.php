@@ -29,15 +29,17 @@ class Check_Plan
         // }
 
         $path = $request->path();
-        echo $path;
+        // echo $path;
         if (($path == "/" || $path == "login" || $path == "plans" || $path == "reset" || $path == "register") && session()->has('plan_id')) {
 
             // dd(session()->all());
+            
 
             return redirect()->route('homepage_index');
-        } else if ($path != "/" && $path != "login" && $path != "plans" && $path != "reset" && (strpos($path, 'register')) && !(session()->has('plan_id'))) {
+        } else if ($path != "/" && $path != "login" && $path != "plans" && $path != "reset" && !(preg_match("/\b(register\w+)\b/", $path)) && !(session()->has('plan_id'))) {
             
             // dd(session()->has('plan_id'));
+
 
             return redirect()->route('get_login');
         } else if ((session('plan_id') == 1) && (($path == "notes") || ($path == "podcasts") || ($path == "videos"))) {
@@ -50,6 +52,8 @@ class Check_Plan
 
             return redirect()->route('homepage_index');
         } else {
+            // echo $path;
+            // echo(session()->has('plan_id'));
 
             return $next($request);
         }
