@@ -86,6 +86,9 @@ Route::group(['middleware' => "web"], function () {
 
     Route::get('/admin/plans', 'Admin\Basic@view_plans')->name('view_plans');
 
+    Route::get('/admin/customers/pdf', 'Admin\Basic@customers_pdf')->name('customers_pdf');
+
+
     // Route::get('/admin', 'Admin\Basic@dashboard')->name('admin_dashboard');
     // Route::get('/admin', 'Admin\Basic@dashboard')->name('admin_dashboard');
 

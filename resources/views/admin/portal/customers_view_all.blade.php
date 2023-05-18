@@ -87,10 +87,18 @@
 
 {{--  PDF DOWNLOAD BUTTON START --}}
 
-<div class="" style=" bottom:80px; right:30px; position: fixed; width: 40px; border-radius: 50%; height: 40px;">
-    <a>
+<div class=""
+    style=" bottom:80px; right:30px; position: fixed; width: 40px; border-radius: 50%; height: 40px;">
+    <a href="{{ route('customers_pdf') }}" target="_blank">
         <i class="fa-solid fa-file-pdf fa-2xl" style="color: #ff0505; "></i>
-    </a> 
+    </a>
+</div>
+
+<div class=""
+    style=" bottom:80px; right:70px; position: fixed; width: 40px; border-radius: 50%; height: 40px;">
+    <a target="_blank" href="{{ route('customers_pdf') }}">
+        <i class="fa-solid fa-file-csv fa-2xl" style="color: #205a38;"></i>
+    </a>
 </div>
 
 {{--  PDF DOWNLOAD BUTTON END --}}

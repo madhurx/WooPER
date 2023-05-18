@@ -5,6 +5,9 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Learners;
+use PDF;
+use DB;
+
 
 class Basic extends Controller
 {
@@ -24,12 +27,24 @@ class Basic extends Controller
         $users = $table->get();
         $title = "LEARNERS";
         // dd($users);
-        return view('admin.portal.customers_view_all')->with(compact('users','title'));
+        return view('admin.portal.customers_view_all')->with(compact('users', 'title'));
     }
-    public function view_plans(){
+    public function view_plans()
+    {
         return view('admin.portal.view_plans');
     }
-    public function create_plans(){
+    public function create_plans()
+    {
         return view('admin.portal.create_plans');
+    }
+    public function customers_pdf()
+
+    {
+        $table = new Learners;
+        $learners = $table->get();
+        $users = ['users' => $learners];
+        $pdf = Pdf::loadView('admin.portal.customers_view_all_pdf', $users);
+        $pdf->download('All Learners.pdf');
+        return $pdf->stream('All learners.pdf');
     }
 }

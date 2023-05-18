@@ -36,7 +36,9 @@ class Check_Plan
             
 
             return redirect()->route('homepage_index');
-        } else if ($path != "/" && $path != "login" && $path != "plans" && $path != "reset" && !(preg_match("/\b(register\w+)\b/", $path)) && !(session()->has('plan_id'))) {
+        } else if ( $path != "/" && $path != "login" && $path != "plans" && $path != "reset" 
+        && !(preg_match("/\b(register\w+)\b/", $path) )
+        && !(session()->has('plan_id'))) {
             
             // dd(session()->has('plan_id'));
 
@@ -54,6 +56,8 @@ class Check_Plan
         } else {
             // echo $path;
             // echo(session()->has('plan_id'));
+            // dd(session()->has('plan_id'));
+
 
             return $next($request);
         }
