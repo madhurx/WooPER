@@ -85,6 +85,16 @@
 
 {{-- CONTENT COL END --}}
 
+{{--  PDF DOWNLOAD BUTTON START --}}
+
+<div class="" style=" bottom:80px; right:30px; position: fixed; width: 40px; border-radius: 50%; height: 40px;">
+    <a>
+        <i class="fa-solid fa-file-pdf fa-2xl" style="color: #ff0505; "></i>
+    </a> 
+</div>
+
+{{--  PDF DOWNLOAD BUTTON END --}}
+
 </div>
 </div>
 
