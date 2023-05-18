@@ -88,6 +88,8 @@ Route::group(['middleware' => "web"], function () {
 
     Route::get('/admin/customers/pdf', 'Admin\Basic@customers_pdf')->name('customers_pdf');
 
+    Route::get('/admin/customers/xls', 'Admin\Basic@customers_xls')->name('customers_xls');
+
 
     // Route::get('/admin', 'Admin\Basic@dashboard')->name('admin_dashboard');
     // Route::get('/admin', 'Admin\Basic@dashboard')->name('admin_dashboard');

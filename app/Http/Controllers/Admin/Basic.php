@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Models\Learners;
 use PDF;
 use DB;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Exports\all_customers_xls;
 
 
 class Basic extends Controller
@@ -38,13 +40,18 @@ class Basic extends Controller
         return view('admin.portal.create_plans');
     }
     public function customers_pdf()
-
     {
         $table = new Learners;
         $learners = $table->get();
         $users = ['users' => $learners];
-        $pdf = Pdf::loadView('admin.portal.customers_view_all_pdf', $users);
+        $pdf = PDF::loadView('admin.portal.customers_view_all_pdf', $users);
         $pdf->download('All Learners.pdf');
         return $pdf->stream('All learners.pdf');
     }
+
+    public function customers_xls()
+    {
+        return Excel::download(new all_customers_xls, 'customers.xlsx');
+    }
+
 }

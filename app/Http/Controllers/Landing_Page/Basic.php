@@ -59,4 +59,3 @@ class Basic extends Controller
 
     }
 }
-{{  }}

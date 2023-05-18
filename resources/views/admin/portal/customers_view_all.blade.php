@@ -96,7 +96,7 @@
 
 <div class=""
     style=" bottom:80px; right:70px; position: fixed; width: 40px; border-radius: 50%; height: 40px;">
-    <a target="_blank" href="{{ route('customers_pdf') }}">
+    <a target="_blank" href="{{ route('customers_xls') }}">
         <i class="fa-solid fa-file-csv fa-2xl" style="color: #205a38;"></i>
     </a>
 </div>
