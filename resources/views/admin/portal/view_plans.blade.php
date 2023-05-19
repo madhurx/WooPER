@@ -15,11 +15,13 @@
                     <ul class="navbar-nav">
 
                         <li class="nav-item">
-                            <a href="{{ route('view_plans') }}" class="nav-link active" href="">View Plans</a>
+                            <a href="{{ route('view_plans') }}" class="nav-link active"
+                                href="">View Plans</a>
                         </li>
 
                         <li class="nav-item">
-                            <a href="{{ route('create_plans') }}" class="nav-link" href="">Add Plan</a>
+                            <a href="{{ route('create_plans') }}" class="nav-link"
+                                href="">Add Plan</a>
                         </li>
 
                     </ul>
@@ -41,22 +43,45 @@
                     table-primary
                     align-middle">
                     <thead class="table-light">
-                        <caption>All Learners</caption>
+                        <caption>All Plans</caption>
+
+
                         <tr>
-                            <th>Name</th>
-                            <th>Gender</th>
-                            <th>Plan</th>
-                            <th>Country</th>
-                            <th>Username</th>
+                            <th>Title</th>
+                            <th>Price</th>
+                            <th>Features</th>
+                            <th>Active Status</th>
                         </tr>
+
+
                     </thead>
                     <tbody class="table-group-divider">
-                        
+                        @foreach ($plans as $plan)
                             <tr class="table-primary">
-                                
-
+                                <td> {{ $plan->planname }}</td>
+                                <td> {{ $plan->price }}</td>
+                                <td>
+                                    <ul>
+                                        @php
+                                            $features = json_decode($plan->features);
+                                        @endphp
+                                        @foreach ($features as $feature)
+                                            @if ($feature != null)
+                                                <li>{{ $feature }}</li>
+                                            @endif
+                                        @endforeach
+                                    </ul>
+                                </td>
+                                <td>
+                                    @if ($plan->is_active == 1)
+                                        Active
+                                    @else
+                                        Inactive
+                                    @endif
+                                </td>
                             </tr>
-                        
+                        @endforeach
+
                     </tbody>
                     <tfoot>
 

@@ -6,7 +6,7 @@ use App\Models\Learners;
 
 use Maatwebsite\Excel\Concerns\FromCollection;
 // use Maatwebsite\Excel\Concerns\FromCollection;
-use Maatwebsite\Excel\Concerns\WithHeadings;
+use Maatwebsite\Excel\Concerns\WithHeadings;    
 use Maatwebsite\Excel\Concerns\WithCustomStartCell;
 class all_customers_xls implements FromCollection, WithHeadings, WithCustomStartCell
 {

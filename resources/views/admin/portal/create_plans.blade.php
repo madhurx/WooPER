@@ -33,71 +33,88 @@
 
     <div class="row row-cols-1 justify-content-center align-items-center g-2 my-3 px-5">
         <div class="col px-5">
-            <form action="">
+            <form action="{{ url('admin\add-plan') }}" method="post" class="mb-4">
+                @csrf
                 <div class=" input-group mb-1">
                     <span class="input-group-text">Plan Name</span>
-                    <input type="text" class="form-control form-control-sm" name="plan_name" id=""
-                        aria-describedby="helpId" placeholder="">
+                    <input type="text" class="form-control form-control-sm" name="planname"
+                        id="" aria-describedby="helpId1" placeholder="">
+                    @error('planname')
+                        <small id="helpId1" class="form-text text-muted">{{ $message }}</small>
+                    @enderror
                 </div>
 
                 <div class=" input-group mb-1">
                     <span class="input-group-text">Price</span>
-                    <input type="text" class="form-control form-control-sm" name="price">
-
+                    <input type="text" class="form-control form-control-sm" name="price"
+                        aria-describedby="helpId2">
+                    @error('price')
+                        <small id="helpId2" class="form-text text-muted">{{ $message }}</small>
+                    @enderror
                 </div>
 
                 <div class="input-group mb-1">
-                    <span class="input-group-text">Feautures 1*</span>
-                    <input type="text" class="form-control form-control-sm" name="feautures_req"
-                        id="">
-                </div>
-                <div class="input-group mb-1">
-                    <span class="input-group-text">Feautures 2</span>
-                    <input type="text" class="form-control form-control-sm" name="feautures[]"
-                        id="">
-                </div>
-                <div class="input-group mb-1">
-                    <span class="input-group-text">Feautures 3</span>
-                    <input type="text" class="form-control form-control-sm" name="feautures[]"
-                        id="">
-                </div>
-                <div class="input-group mb-1">
-                    <span class="input-group-text">Feautures 4</span>
-                    <input type="text" class="form-control form-control-sm" name="feautures[]"
-                        id="">
-                </div>
-                <div class="input-group mb-1">
-                    <span class="input-group-text">Feautures 5</span>
-                    <input type="text" class="form-control form-control-sm" name="feautures[]"
-                        id="">
-                </div>
-                <div class="input-group mb-1">
-                    <span class="input-group-text">Feautures 6</span>
-                    <input type="text" class="form-control form-control-sm" name="feautures[]"
-                        id="">
-                </div>
-                <div class="input-group mb-1">
-                    <span class="input-group-text">Feautures 7</span>
-                    <input type="text" class="form-control form-control-sm" name="feautures[]"
-                        id="">
-                </div>
-                <div class="input-group mb-1">
-                    <span class="input-group-text">Feautures 8</span>
-                    <input type="text" class="form-control form-control-sm" name="feautures[]"
-                        id="">
-                </div>
-                <div class="input-group mb-1">
-                    <span class="input-group-text">Feautures 9</span>
-                    <input type="text" class="form-control form-control-sm" name="feautures[]"
-                        id="">
-                </div>
-                <div class="input-group mb-1">
-                    <span class="input-group-text">Feautures 10</span>
-                    <input type="text" class="form-control form-control-sm" name="feautures[]"
-                        id="">
+                    <span class="input-group-text">Feature 1*</span>
+                    <input type="text" class="form-control form-control-sm" name="required_feature"
+                        id="" aria-describedby="helpId3">
+                    @error('required_feature')
+                        <small id="helpId3" class="form-text text-muted">{{ $message }}</small>
+                    @enderror
                 </div>
 
-
+                <div class="input-group mb-1">
+                    <span class="input-group-text">Feature 2</span>
+                    <input type="text" class="form-control form-control-sm" name="features[]"
+                        id="">
+                </div>
+                <div class="input-group mb-1">
+                    <span class="input-group-text">Feature 3</span>
+                    <input type="text" class="form-control form-control-sm" name="features[]"
+                        id="">
+                </div>
+                <div class="input-group mb-1">
+                    <span class="input-group-text">Feature 4</span>
+                    <input type="text" class="form-control form-control-sm" name="features[]"
+                        id="">
+                </div>
+                <div class="input-group mb-1">
+                    <span class="input-group-text">Feature 5</span>
+                    <input type="text" class="form-control form-control-sm" name="features[]"
+                        id="">
+                </div>
+                <div class="input-group mb-1">
+                    <span class="input-group-text">Feature 6</span>
+                    <input type="text" class="form-control form-control-sm" name="features[]"
+                        id="">
+                </div>
+                <div class="input-group mb-1">
+                    <span class="input-group-text">Feature 7</span>
+                    <input type="text" class="form-control form-control-sm" name="features[]"
+                        id="">
+                </div>
+                <div class="input-group mb-1">
+                    <span class="input-group-text">Feature 8</span>
+                    <input type="text" class="form-control form-control-sm" name="features[]"
+                        id="">
+                </div>
+                <div class="input-group mb-1">
+                    <span class="input-group-text">Feature 9</span>
+                    <input type="text" class="form-control form-control-sm" name="features[]"
+                        id="">
+                </div>
+                <div class="input-group mb-1">
+                    <span class="input-group-text">Feature 10</span>
+                    <input type="text" class="form-control form-control-sm" name="features[]"
+                        id="">
+                </div>
+                <div class="form-check mb-1">
+                    <input class="form-check-input" type="checkbox" name="is_active"
+                        id="flexCheckChecked" checked>
+                    <label class="form-check-label" for="flexCheckChecked">
+                        Active
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-primary my-2">Submit</button>
 
 
             </form>

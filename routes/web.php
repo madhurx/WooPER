@@ -80,9 +80,11 @@ Route::group(['middleware' => "web"], function () {
 
     Route::get('/admin/customers', 'Admin\Basic@customers_view_all')->name('customers_view_all');
 
-    Route::get('/admin/add-plan', 'Admin\Basic@create_plans')->name('create_plans');
+    Route::get('/admin/add-plan', function(){
+        return view('admin.portal.create_plans', ['title' => 'CREATE PLAN']);
+    })->name('create_plans');
 
-    Route::post('/admin/add-plan', 'Admin\Basic@create_plans')->name('create_plans');
+    Route::post('/admin/add-plan', 'Admin\Basic@create_plans')->name('post_plans');
 
     Route::get('/admin/plans', 'Admin\Basic@view_plans')->name('view_plans');
 
