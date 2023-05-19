@@ -25,6 +25,8 @@
 
     {{--  PLANS START  --}}
 
+    {{--  PLANS MANUAL ROW START  --}}
+
     <div class="row rows-cols-4 justify-content-center align-items-start g-2">
 
         {{--  PLAN 1 START  --}}
@@ -272,8 +274,79 @@
         {{--  PLAN 4 END  --}}
 
     </div>
+    {{--  PLANS MANUAL ROW END  --}}
+    {{--  DATABASE PLANS START  --}}
 
-    {{--  PLANS END  --}}
+    @php
+        $i = 0;
+    @endphp
+    @foreach ($plans as $aplan)
+        @if ($aplan->is_active == 1)
+            @if ($i % 3 == 0)
+                <div class="row justify-content-center align-items-start g-2">
+            @endif
+            {{--  PLANS AUTO ROW START  --}}
+
+
+            {{--  PLAN START  --}}
+            <div class="col-3 mx-3 my-4 plans_col1">
+                <div class="mx-2">
+                    <div class="my-3"><i class="fa fa-leaf"></i>
+                    </div>
+                    <div class="plan_type_title">
+                        {{ $aplan->planname }}
+                    </div>
+                    <div class="plan_type_detail">
+                        Introductory Material</div>
+                    <div class="lead plan_price_explain"><span
+                            class="h3 plan_price">₹{{ $aplan->price }}&nbsp;</span>/Per
+                        Month</div>
+
+                    <div class="">
+                        <hr class="text-center mx-1 my-4 plan_detail_hr">
+                    </div>
+                    <div class="plan_details_heading">
+                        Feautures
+                    </div>
+                    @php
+                        $features = json_decode($aplan->features);
+                    @endphp
+                    @foreach ($features as $feature)
+                        @if ($feature != null)
+                            <div>
+                                <i class="fa fa-check-circle-o"></i>
+                                <span class="plan_details_points">{{ $feature }}</span>
+                            </div>
+                        @endif
+                    @endforeach
+
+                    <div>
+                        <a href="{{ route('get_register', ['selected_plan_id' => 1]) }}"
+                            style="text-decoration: none" plan_id="1">
+                            <div style="background-color: black; color:white;"
+                                class="my-3 py-2 text-center h6">
+                                CHOOSE PLAN
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {{--  PLAN END  --}}
+
+            {{--  PLANS AUTO ROW END  --}}
+            @if ($i % 3 == 2)
+</div>
+@endif
+
+@php
+    $i += 1;
+@endphp
+@endif
+@endforeach
+
+{{--  DATABASE PLANS END  --}}
+
+{{--  PLANS END  --}}
 </div>
 
 @include('landing_pages.footer_landing_page')

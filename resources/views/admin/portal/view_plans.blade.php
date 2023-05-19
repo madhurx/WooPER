@@ -40,20 +40,15 @@
                     class="table table-striped
                     table-hover	
                     table-borderless
-                    table-primary
-                    align-middle">
+                    table-primary   ">
                     <thead class="table-light">
                         <caption>All Plans</caption>
-
-
                         <tr>
                             <th>Title</th>
                             <th>Price</th>
                             <th>Features</th>
                             <th>Active Status</th>
                         </tr>
-
-
                     </thead>
                     <tbody class="table-group-divider">
                         @foreach ($plans as $plan)

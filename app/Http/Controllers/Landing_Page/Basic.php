@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Landing_Page;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Plans;
 
 class Basic extends Controller
 {
@@ -16,7 +17,10 @@ class Basic extends Controller
     public function plans()
     {
         $title = "PLANS";
-        return view('landing_pages.pricing_plans')->with(compact('title'));
+        $plans = new Plans;
+        $plans = $plans->get();
+        $title = "Plans";
+        return view('landing_pages.pricing_plans')->with(compact('title','plans'));
     }
     public function get_reset()
     {
