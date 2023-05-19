@@ -289,7 +289,7 @@
 
 
             {{--  PLAN START  --}}
-            <div class="col-3 mx-3 my-4 plans_col1">
+            <div class="col-3 mx-3 my-4" style="background-color: #ffc17b">
                 <div class="mx-2">
                     <div class="my-3"><i class="fa fa-leaf"></i>
                     </div>

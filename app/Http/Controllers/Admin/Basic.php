@@ -52,7 +52,7 @@ class Basic extends Controller
         $req->is_active ? $is_active = 1 : $is_active = 0;
 
         $plans = new Plans;
-        $plans->planname = $req->plan_name;
+        $plans->planname = $req->planname;
         $plans->price = $req->price;
         $plans->features = json_encode($features);
         $plans->is_active = $is_active;
