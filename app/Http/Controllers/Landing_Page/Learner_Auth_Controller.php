@@ -6,7 +6,9 @@ use App\Http\Controllers\Controller;
 use App\Models\Learners;
 use Illuminate\Http\Request;
 use App\Mail\Reset_OTP;
+use App\Mail\new_Registration_mail;
 use Illuminate\Support\Facades\Mail;
+// use Mail;
 
 class Learner_Auth_Controller extends Controller
 {
@@ -31,6 +33,10 @@ class Learner_Auth_Controller extends Controller
         $table_learner->password = $request->password;
         $table_learner->plan_id = $request->plan_id;
         if ($table_learner->save()) {
+            $details = ['name' => ($request->first_name." ".$request->last_name),'username' =>$request->username ];
+            $new_registration_mail = new new_Registration_mail($details);
+            Mail::to($request->username)->send($new_registration_mail);
+            
             return redirect()->action('Landing_Page\Basic@view_login_page');
         } else {
             return redirect()->route('pricing_plans');

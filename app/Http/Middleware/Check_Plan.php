@@ -12,7 +12,7 @@ class Check_Plan
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \Closure  $next
-     * @return mixed
+     * @return mi{{ xed }}
      */
     public function handle($request, Closure $next)
     { 
