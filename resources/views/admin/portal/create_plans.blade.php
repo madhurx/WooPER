@@ -20,7 +20,7 @@
                         </li>
                         <li class="nav-item">
                             <a href="{{ route('create_plans') }}" class="nav-link active"
-                                href="">Add Plan</a>
+                                href="">Add Basic Plan</a>
                         </li>
                     </ul>
                 </div>
@@ -36,7 +36,7 @@
             <form action="{{ url('admin\add-plan') }}" method="post" class="mb-4">
                 @csrf
                 <div class=" input-group mb-1">
-                    <span class="input-group-text">Plan Name</span>
+                    <span class="input-group-text">Basic Plan Name</span>
                     <input type="text" class="form-control form-control-sm" name="planname"
                         id="" aria-describedby="helpId1" placeholder="">
                     @error('planname')

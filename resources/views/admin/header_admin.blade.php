@@ -56,15 +56,15 @@
             <div class="collapse navbar-collapse justify-content-end" id="mynavbarr">
                 <ul class="navbar-nav navbar-nav">
                     <li class="nav-item fw-medium">
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link" href="{{ route('homepage_index') }}">Home</a>
                     </li>
                     <li class="nav-item fw-medium">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="{{ route('about') }}">About</a>
                     </li>
                     <li class="nav-item fw-medium">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="{{ route('contact') }}">Contact</a>
                     </li>
-                    <li class="nav-item dropdown fw-medium">
+                    {{--  <li class="nav-item dropdown fw-medium">
                         <a class="nav-link dropdown-toggle" href="#" role="button"
                             data-bs-toggle="dropdown" data-bs-display="static"
                             aria-expanded="false">Resources</a>
@@ -73,7 +73,7 @@
                             <li><a class="dropdown-item" href="#">Another link</a></li>
                             <li><a class="dropdown-item" href="#">A third link</a></li>
                         </ul>
-                    </li>
+                    </li>  --}}
                 </ul>
             </div>
             <div class="mx-5">
@@ -104,7 +104,7 @@
                         <hr class="w-100 text-center" />
                         <ul style="list-style: none">
                             <li class="nav-item my-3">
-                                <a href="#" class="nav-link align-middle px-0">
+                                <a href="{{ url('/admin') }}" class="nav-link align-middle px-0">
                                     <i class="fa-solid fa-table-columns"></i>
                                     <span class="ms-1 d-none d-sm-inline">Dashboard</span>
                                 </a>

@@ -21,7 +21,7 @@
 
                         <li class="nav-item">
                             <a href="{{ route('create_plans') }}" class="nav-link"
-                                href="">Add Plan</a>
+                                href="">Add Basic Plan</a>
                         </li>
 
                     </ul>

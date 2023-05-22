@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Landing_Page;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Plans;
+use Mail;
 
 class Basic extends Controller
 {

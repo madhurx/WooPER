@@ -15,7 +15,8 @@ class Check_Plan
      * @return mixed
      */
     public function handle($request, Closure $next)
-    {
+    { 
+        // dd("testing");
         // echo("abc");
         // $path = $request->path();{{ {{   }}
         // if (($path == "" || $path == "login" || $path == "plans" || $path == "register") && session()->get('plan_id')) {

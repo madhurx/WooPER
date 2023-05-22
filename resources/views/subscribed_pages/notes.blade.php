@@ -26,7 +26,7 @@
                         web development
                     </p>
                     <a name="" id="" class="btn btn-outline-dark px-3 py-2"
-                        href="link/to/your/download/file" download role="button">
+                        href="{{ URL::asset('assets/subscribed_pages/notes/php.pdf') }}" target="_blank" role="button">
                         <i class="fa fa-arrow-circle-o-down" style="font-size:28px;"></i>&nbsp;
                         <i class="fa fa-file-pdf-o" style="font-size:28px;color:red"></i>
                     </a>
@@ -44,7 +44,7 @@
                         CSS is the language we used to style an HTML document.
                     </p>
                     <a name="" id="" class="btn btn-outline-dark px-3 py-2"
-                        href="link/to/your/download/file" download role="button">
+                    href="{{ URL::asset('assets/subscribed_pages/notes/CSS.pdf') }}" download role="button">
                         <i class="fa fa-arrow-circle-o-down" style="font-size:28px;"></i>&nbsp;
                         <i class="fa fa-file-pdf-o" style="font-size:28px;color:red"></i>
                     </a>

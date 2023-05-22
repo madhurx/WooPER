@@ -17,23 +17,27 @@
 
         <div class="col text-center podcast_col m-3">
             <div class="card border-0">
-                <img src="{{ URL::asset('assets/subscribed_pages/image/podcast/podcast_card_image_1.png') }}" class="card-img-top" alt="" style="width:290px; height:300px">
+                <img src="{{ URL::asset('assets/subscribed_pages/image/podcast/podcast_card_image_1.png') }}"
+                    class="card-img-top" alt="" style="width:290px; height:300px">
                 <div class="card-body">
-                    <h5 class="h5 fw-200 text-center">PHP</h5>
+                    <h5 class="h5 fw-200 text-center">Laravel Origins</h5>
                     <p class="card-text text-center">
                         Sarwan Sir
                     </p>
                     <audio controls class="">
-                        <source src="horse.ogg" type="audio/ogg">
+                        <source
+                            src="{{ URL::asset('assets/subscribed_pages/podcasts/laravel_origins.mp3') }}"
+                            type="audio/ogg">
                         Your browser does not support the audio tag.
-                      </audio>
+                    </audio>
                 </div>
             </div>
         </div>
 
         <div class="col text-center podcast_col m-3">
             <div class="card border-0">
-                <img src="{{ URL::asset('assets/subscribed_pages/image/podcast/podcast_card_image_2.png') }}" class="card-img-top" alt="" style="width:290px; height:300px">
+                <img src="{{ URL::asset('assets/subscribed_pages/image/podcast/podcast_card_image_2.png') }}"
+                    class="card-img-top" alt="" style="width:290px; height:300px">
                 <div class="card-body">
                     <h5 class="h5 fw-200 text-center">PHP</h5>
                     <p class="card-text text-center">
@@ -42,14 +46,15 @@
                     <audio controls class="">
                         <source src="horse.ogg" type="audio/ogg">
                         Your browser does not support the audio tag.
-                      </audio>
+                    </audio>
                 </div>
             </div>
         </div>
 
         <div class="col text-center podcast_col m-3">
             <div class="card border-0">
-                <img src="{{ URL::asset('assets/subscribed_pages/image/podcast/podcast_card_image_3.png') }}" class="card-img-top" alt="" style="width:290px; height:300px">
+                <img src="{{ URL::asset('assets/subscribed_pages/image/podcast/podcast_card_image_3.png') }}"
+                    class="card-img-top" alt="" style="width:290px; height:300px">
                 <div class="card-body">
                     <h5 class="h5 fw-200 text-center">PHP</h5>
                     <p class="card-text text-center">
@@ -58,30 +63,15 @@
                     <audio controls class="">
                         <source src="horse.ogg" type="audio/ogg">
                         Your browser does not support the audio tag.
-                      </audio>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col text-center podcast_col m-3">
-            <div class="card border-0">
-                <img src="{{ URL::asset('assets/subscribed_pages/image/podcast/podcast_card_image_3.png') }}" class="card-img-top" alt="" style="width:290px; height:300px">
-                <div class="card-body">
-                    <h5 class="h5 fw-200 text-center">PHP</h5>
-                    <p class="card-text text-center">
-                        Sarwan Sir
-                    </p>
-                    <audio controls class="">
-                        <source src="horse.ogg" type="audio/ogg">
-                        Your browser does not support the audio tag.
-                      </audio>
+                    </audio>
                 </div>
             </div>
         </div>
 
         <div class="col text-center podcast_col m-3">
             <div class="card border-0">
-                <img src="{{ URL::asset('assets/subscribed_pages/image/podcast/podcast_card_image_1.png') }}" class="card-img-top" alt="" style="width:290px; height:300px">
+                <img src="{{ URL::asset('assets/subscribed_pages/image/podcast/podcast_card_image_3.png') }}"
+                    class="card-img-top" alt="" style="width:290px; height:300px">
                 <div class="card-body">
                     <h5 class="h5 fw-200 text-center">PHP</h5>
                     <p class="card-text text-center">
@@ -90,14 +80,15 @@
                     <audio controls class="">
                         <source src="horse.ogg" type="audio/ogg">
                         Your browser does not support the audio tag.
-                      </audio>
+                    </audio>
                 </div>
             </div>
         </div>
 
         <div class="col text-center podcast_col m-3">
             <div class="card border-0">
-                <img src="{{ URL::asset('assets/subscribed_pages/image/podcast/podcast_card_image_2.png') }}" class="card-img-top" alt="" style="width:290px; height:300px">
+                <img src="{{ URL::asset('assets/subscribed_pages/image/podcast/podcast_card_image_1.png') }}"
+                    class="card-img-top" alt="" style="width:290px; height:300px">
                 <div class="card-body">
                     <h5 class="h5 fw-200 text-center">PHP</h5>
                     <p class="card-text text-center">
@@ -106,14 +97,15 @@
                     <audio controls class="">
                         <source src="horse.ogg" type="audio/ogg">
                         Your browser does not support the audio tag.
-                      </audio>
+                    </audio>
                 </div>
             </div>
         </div>
 
         <div class="col text-center podcast_col m-3">
             <div class="card border-0">
-                <img src="{{ URL::asset('assets/subscribed_pages/image/podcast/podcast_card_image_2.png') }}" class="card-img-top" alt="" style="width:290px; height:300px">
+                <img src="{{ URL::asset('assets/subscribed_pages/image/podcast/podcast_card_image_2.png') }}"
+                    class="card-img-top" alt="" style="width:290px; height:300px">
                 <div class="card-body">
                     <h5 class="h5 fw-200 text-center">PHP</h5>
                     <p class="card-text text-center">
@@ -122,14 +114,15 @@
                     <audio controls class="">
                         <source src="horse.ogg" type="audio/ogg">
                         Your browser does not support the audio tag.
-                      </audio>
+                    </audio>
                 </div>
             </div>
         </div>
 
         <div class="col text-center podcast_col m-3">
             <div class="card border-0">
-                <img src="{{ URL::asset('assets/subscribed_pages/image/podcast/podcast_card_image_3.png') }}" class="card-img-top" alt="" style="width:290px; height:300px">
+                <img src="{{ URL::asset('assets/subscribed_pages/image/podcast/podcast_card_image_2.png') }}"
+                    class="card-img-top" alt="" style="width:290px; height:300px">
                 <div class="card-body">
                     <h5 class="h5 fw-200 text-center">PHP</h5>
                     <p class="card-text text-center">
@@ -138,14 +131,15 @@
                     <audio controls class="">
                         <source src="horse.ogg" type="audio/ogg">
                         Your browser does not support the audio tag.
-                      </audio>
+                    </audio>
                 </div>
             </div>
         </div>
 
         <div class="col text-center podcast_col m-3">
             <div class="card border-0">
-                <img src="{{ URL::asset('assets/subscribed_pages/image/podcast/podcast_card_image_1.png') }}" class="card-img-top" alt="" style="width:290px; height:300px">
+                <img src="{{ URL::asset('assets/subscribed_pages/image/podcast/podcast_card_image_3.png') }}"
+                    class="card-img-top" alt="" style="width:290px; height:300px">
                 <div class="card-body">
                     <h5 class="h5 fw-200 text-center">PHP</h5>
                     <p class="card-text text-center">
@@ -154,7 +148,24 @@
                     <audio controls class="">
                         <source src="horse.ogg" type="audio/ogg">
                         Your browser does not support the audio tag.
-                      </audio>
+                    </audio>
+                </div>
+            </div>
+        </div>
+
+        <div class="col text-center podcast_col m-3">
+            <div class="card border-0">
+                <img src="{{ URL::asset('assets/subscribed_pages/image/podcast/podcast_card_image_1.png') }}"
+                    class="card-img-top" alt="" style="width:290px; height:300px">
+                <div class="card-body">
+                    <h5 class="h5 fw-200 text-center">PHP</h5>
+                    <p class="card-text text-center">
+                        Sarwan Sir
+                    </p>
+                    <audio controls class="">
+                        <source src="horse.ogg" type="audio/ogg">
+                        Your browser does not support the audio tag.
+                    </audio>
                 </div>
             </div>
         </div>

@@ -17,7 +17,8 @@
                         By logging into Wooper, you agree to our Terms of use and
                         Privacy Policy.<br />
                         Or
-                        <span><a href="{{route('pricing_plans')}}" style="text-decoration: none">click
+                        <span><a href="{{ route('pricing_plans') }}"
+                                style="text-decoration: none">click
                                 here</a></span>
                         to create your free account.
                     </p>
@@ -33,8 +34,8 @@
                     <p class="text-center reg_form_heading">Welcome Back!</p>
                 </div>
                 <div class="reg_form_div">
-                    <form method="post" action="{{ url('/') }}/login">
-                        @csrf
+                    <form method="post" action="{{ url('login') }}">
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
                         <div class="input-group input-group-lg mb-3">
                             <span class="input-group-text bg-danger-subtle border-2"><i
                                     class="fa fa-user"></i></span>
@@ -45,18 +46,17 @@
                         <div class="input-group input-group-lg mb-3">
                             <span class="input-group-text bg-danger-subtle border-2"><i
                                     class="fa fa-lock"></i></span>
-                            <input type="password" name="password" value="{{  old('password')  }}"
+                            <input type="password" name="password" value="{{ old('password') }}"
                                 class="form-control form-control-lg bg-secondary bg-opacity-10 text-white border-start-0 border-top-0 border-bottom-0" />
                         </div>
 
-                       
-                            @if(isset($incorrect_msg))
-                            <div class="text-warning">
-                                {{  $incorrect_msg }}
-                            </div>
 
-                            @endif
-                        
+                        @if (isset($incorrect_msg))
+                            <div class="text-warning">
+                                {{ $incorrect_msg }}
+                            </div>
+                        @endif
+
 
                         <div class="mb-3 text-start">
 
@@ -67,7 +67,7 @@
                             </label>
                             <a name="" id=""
                                 class="text-end float-end text-decoration-none text-light fst-italic fw-medium"
-                                href="{{route('get_reset')}}" role="button">Forgot Password?</a>
+                                href="{{ route('get_reset') }}" role="button">Forgot Password?</a>
                         </div>
                         <div class="text-center my-4">
                             <button type="submit"

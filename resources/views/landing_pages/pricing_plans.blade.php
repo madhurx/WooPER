@@ -294,7 +294,7 @@
                     <div class="my-3"><i class="fa fa-leaf"></i>
                     </div>
                     <div class="plan_type_title">
-                        {{ $aplan->planname }}
+                        Basic - {{ $aplan->planname }}
                     </div>
                     <div class="plan_type_detail">
                         Introductory Material</div>

@@ -7,6 +7,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
+
 
     {{-- PHP = check title existance start --}}
     @if (@isset($title))
@@ -50,10 +52,10 @@
 
 
 <body>
-        {{--  PRELOADER START  --}}
-       <div class="loader"></div>  
-       <script src="{{ URL::asset('assets/pre_loader/preloader.js') }}"></script>
-        {{--  PRELOADER END  --}}
+    {{--  PRELOADER START  --}}
+    <div class="loader"></div>
+    <script src="{{ URL::asset('assets/pre_loader/preloader.js') }}"></script>
+    {{--  PRELOADER END  --}}
 
     <nav class="navbar navbar-dark sticky-top navbar_getstarted">
         <div class="container-fluid">

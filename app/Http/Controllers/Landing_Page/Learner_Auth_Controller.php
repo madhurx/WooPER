@@ -56,11 +56,18 @@ class Learner_Auth_Controller extends Controller
                 // $request->session()->put("incorrect_password","Incorrect Passworddd");
                 // return redirect()->back()->with(compact('title','incorrect_pass'));
                 session(['incorrect_msg' => 'Incorrect Password']);
-                return back()->withInput();
+
+                // dd(session()); 
+                // echo("<pre>");
+                // print_r(session());
+                // echo("</pre>");
+                
+                return redirect()->route('get_login');
+                
             }
         } else {
             session(['incorrect_msg' => 'Incorrect Username']);
-            return back();
+            return redirect()->route('get_login');
         }
     }
 
