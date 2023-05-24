@@ -45,6 +45,7 @@ class Basic extends Controller
             'planname' => 'required',
             'price' => 'required',
             'required_feature' => 'required',
+            'plan_id' =>'required'
         ]);
         $features = $req->features;
         $required_feature = $req->required_feature;
@@ -54,6 +55,7 @@ class Basic extends Controller
         $plans = new Plans;
         $plans->planname = $req->planname;
         $plans->price = $req->price;
+        $plans->plan_id = $req->plan_id;
         $plans->features = json_encode($features);
         $plans->is_active = $is_active;
 

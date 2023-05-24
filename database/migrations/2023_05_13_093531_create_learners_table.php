@@ -23,6 +23,8 @@ class CreateLearnersTable extends Migration
             $table->string('username')->unique();
             $table->string('password');
             $table->integer('otp')->nullable();
+            // $table->date('plan_start_date');
+            // $table->date('plan_end_date');
             $table->timestamps();
         });
     }

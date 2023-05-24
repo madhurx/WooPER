@@ -54,9 +54,18 @@
                 </div>
 
                 <div class="input-group mb-1">
+                    <span class="input-group-text">Plan ID</span>
+                    <input type="number" class="form-control form-control-sm" name="plan_id" id=""
+                        aria-describedby="helpI3" placeholder="">
+                    @error('plan_id')
+                        <small id="helpId3" class="form-text text-muted">{{ $message }}</small>
+                    @enderror
+                </div>
+
+                <div class="input-group mb-1">
                     <span class="input-group-text">Feature 1*</span>
-                    <input type="text" class="form-control form-control-sm" name="required_feature"
-                        id="" aria-describedby="helpId3">
+                    <input type="text" class="form-control form-control-sm"
+                        name="required_feature" id="" aria-describedby="helpId3">
                     @error('required_feature')
                         <small id="helpId3" class="form-text text-muted">{{ $message }}</small>
                     @enderror

@@ -17,10 +17,10 @@ class Learner_Auth_Controller extends Controller
     {
         $request->validate(
             [
-                'first_name' => 'required',
-                'last_name' => 'required',
-                'username' => 'required|email',
-                'password' => 'required',
+                'first_name' => 'required|min:2|max:50',
+                'last_name' => 'required|min:2|max:50',
+                'username' => 'required|email|min:4|max:80',
+                'password' => 'required|min:4|max:20',
                 'plan_id' => 'required',
             ]
         );
@@ -52,9 +52,27 @@ class Learner_Auth_Controller extends Controller
 
             if ($user->password == $password) {
 
-                session(['plan_id' => $user->plan_id]);
+                
 
-                return redirect()->action('Home_Pages\Basic@index');
+                $expiring_date = $user->created_at;
+                date_add($expiring_date,date_interval_create_from_date_string("30 days"));
+                if(date("Y-m-d H:i:s") <= $expiring_date)
+                {
+                    session(['plan_id' => $user->plan_id]);
+                    session(['plan_validity' => "valid"]);
+                    return redirect()->action('Home_Pages\Basic@index');
+                }
+                else
+                {
+                    session(['plan_validity' => "not valid"]);
+                    session(['incorrect_msg' => 'Your Plan has expired']);
+                    return redirect()->route('get_login');
+                }
+                
+
+            // dd(session()->all());
+
+                
             } else {
                 // session()->flush();
                 // session()->save();

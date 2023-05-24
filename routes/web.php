@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 // use App\Http\Controllers\Landing_Page\Basic;
-use App\Http\Controllers\Landing_Page\Learner_Auth_Controller;
+// use App\Http\Controllers\Landing_Page\Learner_Auth_Controller;
 // use App\Http\Controllers\Home_pages\Basic;
 // use App\Http\Controllers\Subscribed_pages\Basic;
 
@@ -80,7 +80,7 @@ Route::group(['middleware' => "web"], function () {
 
     Route::get('/admin/customers', 'Admin\Basic@customers_view_all')->name('customers_view_all');
 
-    Route::get('/admin/add-plan', function(){
+    Route::get('/admin/add-plan', function () {
         return view('admin.portal.create_plans', ['title' => 'CREATE PLAN']);
     })->name('create_plans');
 
@@ -91,10 +91,6 @@ Route::group(['middleware' => "web"], function () {
     Route::get('/admin/customers/pdf', 'Admin\Basic@customers_pdf')->name('customers_pdf');
 
     Route::get('/admin/customers/xls', 'Admin\Basic@customers_xls')->name('customers_xls');
-
-
-    // Route::get('/admin', 'Admin\Basic@dashboard')->name('admin_dashboard');
-    // Route::get('/admin', 'Admin\Basic@dashboard')->name('admin_dashboard');
 
     //======= ADMIN PAGES END
 });

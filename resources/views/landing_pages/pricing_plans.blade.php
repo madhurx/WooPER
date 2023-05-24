@@ -282,19 +282,19 @@
     @endphp
     @foreach ($plans as $aplan)
         @if ($aplan->is_active == 1)
-            @if ($i % 3 == 0)
+            @if ($i % 4 == 0)
                 <div class="row justify-content-center align-items-start g-2">
             @endif
             {{--  PLANS AUTO ROW START  --}}
 
 
             {{--  PLAN START  --}}
-            <div class="col-3 mx-3 my-4" style="background-color: #ffc17b">
+            <div class="col-3 col mx-3 my-4" style="background-color: #ffc17b; width:20%">
                 <div class="mx-2">
                     <div class="my-3"><i class="fa fa-leaf"></i>
                     </div>
                     <div class="plan_type_title">
-                        Basic - {{ $aplan->planname }}
+                       {{ $aplan->planname }}
                     </div>
                     <div class="plan_type_detail">
                         Introductory Material</div>
@@ -321,8 +321,8 @@
                     @endforeach
 
                     <div>
-                        <a href="{{ route('get_register', ['selected_plan_id' => 1]) }}"
-                            style="text-decoration: none" plan_id="1">
+                        <a href="{{ route('get_register', ['selected_plan_id' => $aplan->plan_id]) }}"
+                            style="text-decoration: none" plan_id={{ $aplan->plan_id }}>
                             <div style="background-color: black; color:white;"
                                 class="my-3 py-2 text-center h6">
                                 CHOOSE PLAN
@@ -334,7 +334,7 @@
             {{--  PLAN END  --}}
 
             {{--  PLANS AUTO ROW END  --}}
-            @if ($i % 3 == 2)
+            @if ($i % 4 == 3)
 </div>
 @endif
 

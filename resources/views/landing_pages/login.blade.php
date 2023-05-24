@@ -52,7 +52,7 @@
 
 
                         @if (isset($incorrect_msg))
-                            <div class="text-warning">
+                            <div class="text-danger">
                                 {{ $incorrect_msg }}
                             </div>
                         @endif

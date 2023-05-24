@@ -58,7 +58,7 @@
                                 <td class="pe-2">
                                     <div class="mb-3">
                                         <label for="" class="form-label">First Name</label>
-                                        <input type="text"
+                                        <input type="text" minlength="2" title="2 characters minimum"
                                             class="form-control form-control-lg bg-secondary bg-opacity-10 text-white border-top-0 border-start-0 border-end-0"
                                             name="first_name" id="" placeholder="">
                                         <small class="form-text text-warning fw-medium">
@@ -71,7 +71,7 @@
                                 <td class="ps-2">
                                     <div class="mb-3">
                                         <label for="" class="form-label">Last Name</label>
-                                        <input type="text"
+                                        <input type="text" minlength="2" title="2 characters minimum"
                                             class="form-control form-control-lg bg-secondary bg-opacity-10 text-white border-top-0 border-start-0 border-end-0"
                                             name="last_name" id="" placeholder="">
                                         <small class="form-text text-warning fw-medium">
@@ -121,7 +121,7 @@
                                 <td colspan="2">
                                     <div class="mb-3">
                                         <label for="" class="form-label">Email</label>
-                                        <input type="email"
+                                        <input type="email" minlength="4" title="4 characters minimum"
                                             class="form-control form-control-lg bg-secondary bg-opacity-10 text-white border-top-0 border-start-0 border-end-0 "
                                             name="username" id="">
                                         <small class="form-text text-warning fw-medium">
@@ -138,7 +138,7 @@
                                         <label for="" class="form-label">Password</label>
                                         <input type="password"
                                             class="form-control form-control-lg bg-secondary bg-opacity-10 text-white border-top-0 border-start-0 border-end-0"
-                                            name="password" id="" placeholder="">
+                                            name="password" minlength="5" title="5 characters minimum" required id="" placeholder="">
                                         <small class="form-text text-warning fw-medium">
                                             @error('password')
                                                 {{ $message }}

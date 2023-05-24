@@ -17,6 +17,7 @@ class CreatePlansTable extends Migration
             $table->id();
             $table->string('planname');
             $table->integer('price');
+            $table->integer('plan_id');
             $table->json('features');
             $table->boolean('is_active')->default(1);
             $table->timestamps();

@@ -44,6 +44,7 @@
                     <thead class="table-light">
                         <caption>All Plans</caption>
                         <tr>
+                            <th>Plan ID</th>
                             <th>Title</th>
                             <th>Price</th>
                             <th>Features</th>
@@ -53,6 +54,7 @@
                     <tbody class="table-group-divider">
                         @foreach ($plans as $plan)
                             <tr class="table-primary">
+                                <td> {{ $plan->plan_id }}</td>
                                 <td> {{ $plan->planname }}</td>
                                 <td> {{ $plan->price }}</td>
                                 <td>
