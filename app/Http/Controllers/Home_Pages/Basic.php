@@ -9,6 +9,8 @@ class Basic extends Controller
 {
     public function index()
     {
+        // dd(session('plan_id'));
+
         $title = "HOME";
         $plan_id = session('plan_id') ?? 0;
         return view('home_pages.home')->with(compact('plan_id','title'));

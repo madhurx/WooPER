@@ -35,17 +35,18 @@ class Check_Plan
 
         $path = $request->path();
 
-        if (($path == "/" || $path == "login" || $path == "plans" || $path == "reset" || $path == "register") && session()->has('plan_id')) {
+        // if (($path == "/" || $path == "login" || $path == "plans" || $path == "reset" || $path == "register") && session()->has('plan_id')) {
 
-            return redirect()->route('homepage_index');
-        } else if (
-            $path != "/" && $path != "login" && $path != "plans" && $path != "reset"
-            && (!preg_match("/\b(register\w*)\b/", $path))
-            && !(session()->has('plan_id'))
-        ) {
+        //     return redirect()->route('homepage_index');
+        // } else if (
+        //     $path != "/" && $path != "login" && $path != "plans" && $path != "reset"
+        //     && (!preg_match("/\b(register\w*)\b/", $path))
+        //     && !(session()->has('plan_id'))
+        // ) {
 
-            return redirect()->route('get_login');
-        } else if ((session('plan_id') == 1) && (($path == "notes") || ($path == "podcasts") || ($path == "videos"))) {
+        //     return redirect()->route('get_login');
+        // }        else 
+        if ((session('plan_id') == 1) && (($path == "notes") || ($path == "podcasts") || ($path == "videos"))) {
 
             return redirect()->route('homepage_index');
         } else if ((session('plan_id') == 2) && (($path == "podcasts") || ($path == "videos"))) {

@@ -59,13 +59,17 @@ class Learner_Auth_Controller extends Controller
                 if(date("Y-m-d H:i:s") <= $expiring_date)
                 {
                     session(['plan_id' => $user->plan_id]);
-                    session(['plan_validity' => "valid"]);
-                    return redirect()->action('Home_Pages\Basic@index');
+                    session(['plan_validity' => "valid"]); 
+                    Session()->put('plan_id',$user->plan_id);
+                    // dd(session('plan_id')); 
+                    // return redirect()->action('Home_Pages\Basic@index');
+                    return redirect()->route('homepage_index');
+
                 }
                 else
                 {
                     session(['plan_validity' => "not valid"]);
-                    session(['incorrect_msg' => 'Your Plan has expired']);
+                    session(['incorrect_msg' => 'Your Plan has expired. Please purchase a plan again.']);
                     return redirect()->route('get_login');
                 }
                 

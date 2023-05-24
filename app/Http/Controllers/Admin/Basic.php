@@ -45,7 +45,7 @@ class Basic extends Controller
             'planname' => 'required',
             'price' => 'required',
             'required_feature' => 'required',
-            'plan_id' =>'required'
+            'plan_id' =>'required|digits_between:1,4|integer'
         ]);
         $features = $req->features;
         $required_feature = $req->required_feature;

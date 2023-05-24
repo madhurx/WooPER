@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::group(['middleware' => "web"], function () {
+// Route::group(['middleware' => "web"], function () {
     //======= LANDING PAGES START
 
     Route::get('/', 'Landing_Page\Basic@get_started')->name('get_started');
@@ -56,13 +56,13 @@ Route::group(['middleware' => "web"], function () {
 
     //======= SUBSCRIBED PAGES START
 
-    Route::get('/videos', 'Subscribed_pages\Basic@videos')->name('videos');
+    Route::get('/videos', 'Subscribed_pages\Basic@videos')->name('videos')->middleware('check_plan_middleware');
 
-    Route::get('/podcasts', 'Subscribed_pages\Basic@podcasts')->name('podcasts');
+    Route::get('/podcasts', 'Subscribed_pages\Basic@podcasts')->name('podcasts')->middleware('check_plan_middleware');
 
-    Route::get('/notes', 'Subscribed_pages\Basic@notes')->name('notes');
+    Route::get('/notes', 'Subscribed_pages\Basic@notes')->name('notes')->middleware('check_plan_middleware');
 
-    Route::get('/blogs', 'Subscribed_pages\Basic@blogs')->name('blogs');
+    Route::get('/blogs', 'Subscribed_pages\Basic@blogs')->name('blogs')->middleware('check_plan_middleware');
 
     //======= SUBSCRIBED PAGES END
 
@@ -93,4 +93,4 @@ Route::group(['middleware' => "web"], function () {
     Route::get('/admin/customers/xls', 'Admin\Basic@customers_xls')->name('customers_xls');
 
     //======= ADMIN PAGES END
-});
+// });
